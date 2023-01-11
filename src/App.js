@@ -11,18 +11,21 @@ import Home from "./home/Home";
 function App() {
   return (
     <div className="App">
-      <Header />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/register" element={<Register />} />
-        <Route path="/favorites" />
-        <Route path="/upload-song" />
+      <div className="Nav">
+        <Header />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/search" element={<Register />} />
+          <Route path="/favorites" />
+          <Route path="/upload-song" />
 
-        <Route path="/songs" element={<Song />}>
-          <Route path=":id" />
-        </Route>
-      </Routes>
+          <Route path="/songs" element={<Song />}>
+            <Route path=":id" />
+          </Route>
+        </Routes>
+      </div>
       <Footer />
     </div>
   );
