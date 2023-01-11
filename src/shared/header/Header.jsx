@@ -99,8 +99,8 @@ const Header = () => {
           </NavLink>
           <div className="header_playlist">
             <NavLink className="header_playlist_item" to="/">
-              <i class="fa-solid fa-user"></i>
-              About us
+            <i class="fa-sharp fa-solid fa-users"></i>
+             About us
             </NavLink>
           </div>
         </div>
