@@ -1,13 +1,63 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+
+/* ======== google fonts ========= */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700&display=swap");
+
+/* ======== css variables ============ */
+:root {
+
+  --primary-color: #1ED760;
+  --secondary-color: rgb(255,255,255);
+  --body-bg: #121212;
+  --font-name: "Montserrat", sans-serif;
+  --card-bg: #181818;
+  --navbar: #000000;
+  --gray: #B3B3B3;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+
+
+/* reset default style */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* base style */
+
+body {
+  background: var(--body-bg);
+  font-family: var(--font-name);
+  color: var(--secondary-color); 
+  width: 100%;
+  height: 100vh; 
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-name)
+}
+
+a {
+  text-decoration: none;
+  color: unset;
+}
+
+h1,
+h2 {
+  font-size: 2.1rem;
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+
+
+li, ul{
+  list-style-type: none;
+  text-decoration: none;
 }
