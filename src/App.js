@@ -4,7 +4,7 @@ import Header from "./shared/header/Header";
 import Footer from "./shared/footer/Footer";
 import Login from "./login/Login";
 import Register from "./register/Register";
-import Song from "./songDetails/Song";
+import SongDetails from "./songDetails/SongDetails";
 import { Route, Routes } from "react-router-dom";
 import Home from "./home/Home";
 import Search from "./search/Search";
@@ -22,7 +22,7 @@ function App() {
           <Route path="/favorites" />
           <Route path="/upload-song" />
 
-          <Route path="/songs" element={<Song />}>
+          <Route path="/songs" element={<SongDetails />}>
             <Route path=":id" />
           </Route>
         </Routes>
