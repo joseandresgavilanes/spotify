@@ -7,6 +7,7 @@ import Register from "./register/Register";
 import Song from "./songDetails/Song";
 import { Route, Routes } from "react-router-dom";
 import Home from "./home/Home";
+import Search from "./search/Search";
 
 function App() {
   return (
@@ -17,7 +18,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
-          <Route path="/search" element={<Register />} />
+          <Route path="/search" element={<Search />} />
           <Route path="/favorites" />
           <Route path="/upload-song" />
 
