@@ -1,0 +1,114 @@
+.footer{
+    width: 100%;
+    height: 100%;
+    background-color: var(--footer);
+    border-top: 1px solid rgba(128, 128, 128, 0.213);
+    display: flex;
+    align-items: center;
+    padding: 20px 30px;  
+    &_song{
+        display: flex;
+        align-items: center;
+        gap: 1em;
+        width: 20%;
+        max-width: 200px;
+        &_img{
+            width: 55px;
+            height: 55px;
+            img{
+                widows: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+        }
+
+        &_details{
+            display: flex;
+            flex-direction: column;
+            font-weight: 500;
+            gap: .2em;
+            margin-right: 10px ;
+            &_title{
+                color: var(--secondary-color);
+                font-size: 13px;
+                font-weight: 500;
+                letter-spacing: .1px;
+
+            }
+            &_text{
+                font-size: 10px;
+                color: rgba(191, 191, 191, 0.66);
+
+            }
+        }
+
+        &_extras{
+            display: flex;
+            gap: .8em;
+        }
+        
+    }
+    &_controls{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 80%;
+        gap: .5em;
+
+        &_btns{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1.3em;
+
+            &_play{
+                background-color: var(--secondary-color);
+                height: 35px;
+                width: 35px;
+                padding: 6px;
+                border-radius: 50%;
+            }
+        }
+
+        &_selector{
+            display: flex;
+            gap: 1em;
+            width: 60%;
+            max-width: 600px;
+            justify-content: center;
+            align-items: center;
+            color: var(--gray);
+            input{
+                background: linear-gradient(to right, rgb(29, 185, 84) 0%, rgb(29, 185, 84) 58.0641%, rgb(83, 83, 83) 58.0641%, rgb(83, 83, 83) 100%);
+                width: 100%;
+                height: 4px;
+            }
+            p{
+                font-size: 11px;
+            }
+        }
+    }
+
+    &_extras{
+        display: flex;
+        width: 25%;
+        max-width: 220px;
+        height: 10px;
+        justify-content: center;
+        align-items: center;
+        gap: 1em;
+        color: var(--gray);
+        &_range{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0.3em;
+
+            input{
+                width: 100px;
+                height: 4px;
+            }
+        }
+    }
+}
