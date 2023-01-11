@@ -97,27 +97,24 @@ const Header = () => {
             </div>
             Your Favorites
           </NavLink>
+          <div className="header_playlist">
+            <NavLink className="header_playlist_item" to="/">
+              <i class="fa-solid fa-user"></i>
+              About us
+            </NavLink>
+          </div>
         </div>
 
         <div className="header_playlist">
           <div className="header_line"></div>
           <NavLink className="header_links_item" to="/">
-            Playlist 1
+            My Playlist #1
           </NavLink>
           <NavLink className="header_links_item" to="/">
-            Playlist 2
+            My Playlist #2
           </NavLink>
           <NavLink className="header_links_item" to="/">
-            Playlist 3
-          </NavLink>
-          <NavLink className="header_links_item" to="/">
-            Playlist 4
-          </NavLink>
-          <NavLink className="header_links_item" to="/">
-            Playlist 5
-          </NavLink>
-          <NavLink className="header_links_item" to="/">
-            Playlist 6
+            My Playlist #3
           </NavLink>
         </div>
       </div>
