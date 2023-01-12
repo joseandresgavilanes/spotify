@@ -4,25 +4,24 @@ import axios from "axios";
 
 const Login = () => {
   // React States
-  const [errorMessages, setErrorMessages] = useState({});
-  const [isSubmitted, setIsSubmitted] = useState(false);
   const [userdb, setUserdb] = useState([]);
+  const [errorMessages, setErrorMessages] = useState({});
   const [uname, setUname] = useState("");
   const [pass, setPass] = useState("");
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
   //Load User
   async function loadUser(user) {
-    try {
-      axios
+    try { await  axios
         .get(
           `https://loggin-api-production.up.railway.app/usuarios/correo/${user}`
         )
         .then((json) => {
           console.log(json.data);
           setUserdb(json.data);
-        });
+        }); 
 
-      /*  const request = await fetch(
+      /* const request = await fetch(
         `https://loggin-api-production.up.railway.app/usuarios/correo/${user}`
         );
         const json = await request.json();
@@ -30,6 +29,7 @@ const Login = () => {
         console.log(json);  */
     } catch (error) {}
   }
+
   /* constantes  para errores de login */
   const errors = {
     uname: "invalid username",
@@ -40,31 +40,35 @@ const Login = () => {
   //submit//
 
   const handleSubmit = (event) => {
+    loadUser(uname);
     //Prevent page reload
     event.preventDefault();
     // Find user login info
-    loadUser(uname);
+    
     console.log("pasa el load user");
+    console.log(uname);
+    console.log(pass);
 
-    const userData = userdb;
-    if (userData.nombre !== "") {
+    if (userdb.nombre !== "") {
       console.log(userdb.contraseña);
-      console.log(userData.nombre);
+      console.log(userdb.nombre);
       // Compare user info
 
-      if (userData) {
-        if (userData.correo === uname && userData.contraseña === pass) {
+      if (userdb) {
+        if (userdb.correo === uname && userdb.contraseña === pass) {
           console.log("usuario y contraseña correctos");
           setIsSubmitted(true);
-        } else if (userData.correo !== uname) {
+        }
+        if (userdb.correo !== uname) {
           // Nombre de Usuario no Encontrado
           setErrorMessages({ name: "uname", message: errors.uname });
-          
-        } else {
-          // Invalid password
-          setErrorMessages({ name: "pass", message: errors.pass });
-        }
-      } else {
+          } else 
+           {
+              // Invalid password
+              setErrorMessages({ name: "pass", message: errors.pass });
+              }
+              } 
+      else {
         setErrorMessages({ name: "uname", message: errors.data });
       }
     }
@@ -85,7 +89,7 @@ const Login = () => {
           <input
             type="text"
             name="uname"
-            placeholder="User .."
+            placeholder="e-mail ..."
             required
             onChange={(e) => setUname(e.target.value)}
             value={uname}
@@ -105,7 +109,7 @@ const Login = () => {
           {renderErrorMessage("pass")}
         </div>
         <div className="button-container">
-          <input type="submit" />
+          <button type="submit"> LogIn</button>
           <button>Register</button>
         </div>
       </form>
