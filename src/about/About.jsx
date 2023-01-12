@@ -1,29 +1,19 @@
 import React from 'react'
 import "./About.scss";
+import Tarjeta from './tarjeta/Tarjeta';
 
 const About = () => {
   return (
     <div className='container'>
-<div class="card-vinyl">
-  <div class="card-image"></div>
-  <div class="card-content">
-    <h2 class="card-title">Jose Andres Gavilanes</h2>
-    <p class="card-artist">Developer</p>
-  </div>
-  <div class="card-footer">
-    <div class="vinyl-info">
-        <span>Label: </span>
-        <span>Year: </span>
-        <span>Genre: </span>
+        <div className='superiores'>
+            <Tarjeta nombre="Jose Andres Gavilanes" puesto="Developer" foto='./logo192.png'/>
+           
+            <Tarjeta nombre="Alexander Cangas" puesto="Developer" foto='./logo192.png'/>
+            </div>
+            <div className='inferior'>
+            <Tarjeta nombre="Adrian Bastidas" puesto="systems engineering student" foto='./logo192.png'/>
+            </div>
     </div>
-  </div>
-</div>
-</div>
-
-
-
-
-
   )
 }
 

@@ -1,58 +1,15 @@
-.card-vinyl {
-    /* styles for the vinyl record card */
-    width: 350px;
-    height: 400px;
-    background: #282828;
-    border-radius: 0;
-    overflow: hidden;
-    position: relative;
-    box-shadow:
-        0 0 20px #0003,
-        inset 0 0 10px #0003;
-    }
-
-.card-image {
-    /* create a central square*/
-    width: 60%;
-    height: 50%;
-    background-color: #f3f3f3;
-    border-radius: 0;
-    position: absolute;
-    top: 45%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    box-shadow:
-        inset -5px -5px 5px #fff5,
-        inset 5px 5px 5px #0005;
-}
-.card-title{
-    font-size: 110%;
-}
-.card-content {
-    /* adjust content style*/
-    padding: 20px;
-    color: #fff;
-    background-color: rgba(0, 0, 0, 0.5);
-    position: absolute;
-    bottom: 0;
+.container{
     width: 100%;
-    font-size: 1.5rem;
-    font-weight: bold;
-    font-family: 'Arial', sans-serif;
+    overflow-y: scroll;
 }
-.card-footer {
-    /* existing styles */
-    background-color: #333;
-    border-radius: 0;
-    padding: 20px;
-    font-size: 14px;
-    text-align: center;
-    font-family: 'Arial', sans-serif;
+.superiores{
+    display: flex;
+    margin-top: 2%;
+    margin-left: 10%;
 }
-.vinyl-info span {
-    /* existing styles */
-    font-weight: bold;
-    color: #ccc;
-    margin-right: 15px;
-    display:inline-block;
+.inferior{
+    margin-top: 3%;
+    margin-left: 32%;
+    margin-bottom: 2%;
 }
+
