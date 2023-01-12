@@ -19,7 +19,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/search" element={<Search />} />
-          <Route path="/favorites" />
+          <Route path="/favorites" element={<SongDetails />} />
           <Route path="/upload-song" />
 
           <Route path="/songs" element={<SongDetails />}>
