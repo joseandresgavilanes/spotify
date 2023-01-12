@@ -1,8 +1,8 @@
 
 .card-vinyl {
     /* styles for the vinyl record card */
-    width: 70%;
-    height: 400px;
+    width: 78%;
+    height: 160%;
     background: #282828;
     border-radius: 0;
     position: relative;
@@ -12,36 +12,32 @@
     };
 .card-image {
     /* create a central square*/
-    width: 30%;
-    height: 28%;
-    background-color: #f3f3f3;
+    width: 45%;
+    height: 25%;
+    background-color: transparent;
     border-radius: 0;
-    position: absolute;
-    top: 15%;
+    position:absolute;
+    top: 20%;
     background-size: cover;
-    left: 34%;
-    box-shadow:
-        inset -5px -5px 5px #fff5,
-        inset 5px 5px 5px #0005;
-
+    left: 30%;
 }
 
 .card-title{
-    font-size: 110%;
+    font-size: 90%;
 }
 .container{
-    width: 100%;
+    width: 80%;
     padding: 0%;
 }
 .card-content {
     /* adjust content style*/
-    padding: 20px;
+    padding: 5%;
     color: #fff;
     background-color: rgba(0, 0, 0, 0.4);
     position: absolute;
     bottom: 0;
     width: 100%;
-    font-size: 1.5rem;
+    font-size: 150%;
     font-weight: bold;
     font-family: 'Arial', sans-serif;
 }
@@ -49,8 +45,8 @@
     /* existing styles */
     background-color: #333;
     border-radius: 0;
-    padding: 5px;
-    font-size: 14px;
+    padding: 2%;
+    font-size: 14%;
     text-align: center;
     font-family: 'Arial', sans-serif;
 }
@@ -58,7 +54,7 @@
     /* existing styles */
     font-weight: bold;
     color: #ccc;
-    margin-right: 15px;
+    margin-right: 5%;
     display:inline-block;
 }
 h3{
@@ -80,11 +76,139 @@ h3{
 .info{
     margin-left: 5%;
     width: 90%;
-    margin-top: 37%;
+    margin-top: 50%;
 
 }
 .texto{
     margin-top: 5%;
     width: 100%;
     font-size: 80%;
+}
+.fotos_about{
+    width: 90%;
+    border-radius: 50%;
+    margin-top: -10%;
+}
+.card-artist{
+    font-size: 80%;
+}
+@media only screen and (max-width: 768px){
+    .card-vinyl{
+        width: 110%;
+    }
+    .container{
+        padding-top: 5%;
+        padding-bottom: 5%;
+    }
+    .card-image{
+        width: 60%;
+        height: 50%;
+        margin-left: -5%;
+    }
+    .card-title{
+        font-size: 90%;
+    }
+    .card-artist{
+        font-size: 60%;
+    }
+    .info{ 
+
+        padding: 10%;
+    }
+    .texto{
+        margin-top: -10%;
+        font-size: 80%;
+    }
+    .iconos{
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        padding-top: 5%;
+        margin-left: 5%;
+        .iconos_redes{
+            width: 30%;
+            font-size: 110%;
+        }
+    }
+    .fotos_about{
+        width: 80%;
+        border-radius: 50%;
+        margin-top: -10%;
+    }
+    .espacio{
+        margin-left: 5%;
+        width: 100%;
+        margin-top: 65%;
+        padding-bottom: 60%;
+    }
+    .card-content {
+        /* adjust content style*/
+        padding: 5%;
+        color: #fff;
+        background-color: rgba(0, 0, 0, 0.4);
+        width: 100%;
+        font-size: 150%;
+        font-weight: bold;
+        font-family: 'Arial', sans-serif;
+    }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px){
+    .card-vinyl{
+        width: 100%;
+    }
+    .container{
+        padding-top: 5%;
+        padding-bottom: 5%;
+    }
+    .card-image{
+        width: 60%;
+        height: 50%;
+        margin-left: -5%;
+    }
+    .card-title{
+        font-size: 90%;
+    }
+    .card-artist{
+        font-size: 60%;
+    }
+    .info{ 
+
+        padding: 10%;
+    }
+    .texto{
+        margin-top: -10%;
+        font-size: 110%;
+    }
+    .iconos{
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        padding-top: 5%;
+        margin-left: 5%;
+        .iconos_redes{
+            width: 30%;
+            font-size: 110%;
+        }
+    }
+    .fotos_about{
+        width: 80%;
+        border-radius: 50%;
+        margin-top: -10%;
+    }
+    .espacio{
+        margin-left: 4%;
+        width: 100%;
+        margin-top: 65%;
+        padding-bottom: 30%;
+    }
+    .card-content {
+        /* adjust content style*/
+        padding: 5%;
+        color: #fff;
+        background-color: rgba(0, 0, 0, 0.4);
+        width: 100%;
+        font-size: 150%;
+        font-weight: bold;
+        font-family: 'Arial', sans-serif;
+    }
 }

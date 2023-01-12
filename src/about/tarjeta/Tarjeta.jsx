@@ -9,7 +9,7 @@ const Tarjeta = (props) => {
         <div className='container'>
             <div class="card-vinyl">
                 <div className='card_image_container'>
-                <div class="card-image" style={{ backgroundImage: `url(${imgUrl})` }}></div>
+                <div class="card-image" ><img className='fotos_about' src={imgUrl}/></div>
                 </div>
                 <div class="card-content">
                     <h2 class="card-title">{props.nombre}</h2>
@@ -31,8 +31,10 @@ const Tarjeta = (props) => {
                         <h1><span>Meet me</span></h1>
                     </div>
                 </div>
+                <div className='espacio'>
                 <div className='info'>
                     <p className='texto'>{props.detalle}</p>
+                </div>
                 </div>
             </div>
         </div>

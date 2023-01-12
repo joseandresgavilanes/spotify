@@ -1,17 +1,63 @@
-.container{
-    overflow-y: scroll;
-}
-.superiores{
-    width: 90%;
-    display: flex;
-    margin-top: 2%;
-    margin-left: 5%;
-}
-.inferior{
-    width: 45%;
-    display: flex;
-    margin-top: 3%;
-    margin-left: 27%;
-    margin-bottom: 2%;
-}
+@media only screen and (min-width: 991px) {
+    .container{
+        width: 100%;
+        margin-left: 5%;
+    }
+    .about{
+        overflow-y: scroll;
+    }
+    .superiores{
+        width: 95%;
+        height: 30%;
+        display: flex;
+        margin-top: 2%;
+        margin-left: 5%;
+    }
+    .inferior{
+        width: 60%;
+        display: flex;
+        margin-top: 20%;
+        margin-left: 26%;
+        margin-bottom: 2%;
+    }
+  }
+  
 
+
+@media only screen and (max-width: 768px) {
+    .about{
+        overflow-y: scroll;
+    }
+    .superiores{
+        width: 90%;
+        display: block;
+        .primera{
+            padding-bottom: 2%;
+        }
+        margin-top: 3%;
+        margin-left: 30%;
+    }
+    .inferior{
+        width: 90%;
+        margin-left: 30%;
+    }
+  }
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+    .about{
+        overflow-y: scroll;
+    }
+    .superiores{
+        width: 90%;
+        display: block;
+        .primera{
+            padding-bottom: 2%;
+        }
+        margin-top: 3%;
+        margin-left: 30%;
+    }
+    .inferior{
+        width: 90%;
+        margin-left: 30%;
+    }
+  }
+  
