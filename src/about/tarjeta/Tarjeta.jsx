@@ -2,8 +2,12 @@ import React,{ useState } from 'react'
 import "./Tarjeta.scss";
 
 const Tarjeta = (props) => {
+    const [isFlipped, setIsFlipped] = useState(false);
     return (
-        <div className='container'>
+        <div className={`flip-card ${isFlipped ? 'flip' : ''}`} onClick={() => setIsFlipped(!isFlipped)}>
+        <div className="flip-card-inner">
+          <div className="flip-card-front">
+          <div className='container'>
                   <div class="card-vinyl">
                 <div class="card-image"><img src={props.foto}></img></div>
                 <div class="card-content">
@@ -28,6 +32,13 @@ const Tarjeta = (props) => {
                 </div>
             </div>
             </div>
+          </div>
+          <div className="flip-card-back">
+            Back of card
+          </div>
+        </div>
+      </div>
+       
   )
 }
 
