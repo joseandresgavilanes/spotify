@@ -1,7 +1,7 @@
 import React from "react";
 import "./Song.scss";
 
-const Song = ({ item }) => {
+const Song = () => {
   return (
     <div className="card">
       <div className="img-holder">
