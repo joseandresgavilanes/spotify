@@ -2,7 +2,7 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import "./Song.scss";
 
-const Song = ({ item }) => {
+const Song = () => {
   return (
     <NavLink to={`/song/${item.id}`}>
       <div className="card">

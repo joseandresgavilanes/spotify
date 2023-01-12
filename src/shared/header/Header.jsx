@@ -98,9 +98,9 @@ const Header = () => {
             Your Favorites
           </NavLink>
           <div className="header_playlist">
-            <NavLink className="header_playlist_item" to="/">
-              <i class="fa-solid fa-user"></i>
-              About us
+            <NavLink className="header_playlist_item" to="/About">
+            <i class="fa-sharp fa-solid fa-users"></i>
+             About us
             </NavLink>
           </div>
         </div>
