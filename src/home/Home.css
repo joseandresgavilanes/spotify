@@ -1,0 +1,7 @@
+.home {
+  width: 100%;
+  display: flex;
+  overflow-y: scroll;
+  padding: 40px 35px;
+  justify-content: center;
+}/*# sourceMappingURL=Home.css.map */

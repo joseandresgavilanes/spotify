@@ -1,0 +1,105 @@
+.footer {
+  width: 100%;
+  height: 100%;
+  background-color: var(--footer);
+  border-top: 1px solid rgba(128, 128, 128, 0.213);
+  display: flex;
+  align-items: center;
+  padding: 20px 30px;
+}
+.footer_song {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  width: 20%;
+  max-width: 200px;
+}
+.footer_song_img {
+  width: 55px;
+  height: 55px;
+}
+.footer_song_img img {
+  widows: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.footer_song_details {
+  display: flex;
+  flex-direction: column;
+  font-weight: 500;
+  gap: 0.2em;
+  margin-right: 10px;
+}
+.footer_song_details_title {
+  color: var(--secondary-color);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.1px;
+}
+.footer_song_details_text {
+  font-size: 10px;
+  color: rgba(191, 191, 191, 0.66);
+}
+.footer_song_extras {
+  display: flex;
+  gap: 0.8em;
+}
+.footer_controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 80%;
+  gap: 0.5em;
+}
+.footer_controls_btns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.3em;
+}
+.footer_controls_btns_play {
+  background-color: var(--secondary-color);
+  height: 35px;
+  width: 35px;
+  padding: 6px;
+  border-radius: 50%;
+}
+.footer_controls_selector {
+  display: flex;
+  gap: 1em;
+  width: 60%;
+  max-width: 600px;
+  justify-content: center;
+  align-items: center;
+  color: var(--gray);
+}
+.footer_controls_selector input {
+  background: linear-gradient(to right, rgb(29, 185, 84) 0%, rgb(29, 185, 84) 58.0641%, rgb(83, 83, 83) 58.0641%, rgb(83, 83, 83) 100%);
+  width: 100%;
+  height: 4px;
+}
+.footer_controls_selector p {
+  font-size: 11px;
+}
+.footer_extras {
+  display: flex;
+  width: 25%;
+  max-width: 220px;
+  height: 10px;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  color: var(--gray);
+}
+.footer_extras_range {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.3em;
+}
+.footer_extras_range input {
+  width: 100px;
+  height: 4px;
+}/*# sourceMappingURL=Footer.css.map */
