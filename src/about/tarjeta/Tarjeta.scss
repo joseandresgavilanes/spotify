@@ -2,10 +2,9 @@
 .card-vinyl {
     /* styles for the vinyl record card */
     width: 70%;
-    height: 450px;
+    height: 400px;
     background: #282828;
     border-radius: 0;
-    overflow: hidden;
     position: relative;
     box-shadow:
         0 0 20px #0003,
@@ -13,8 +12,8 @@
     };
 .card-image {
     /* create a central square*/
-    width: 35%;
-    height: 30%;
+    width: 30%;
+    height: 28%;
     background-color: #f3f3f3;
     border-radius: 0;
     position: absolute;
@@ -50,7 +49,7 @@
     /* existing styles */
     background-color: #333;
     border-radius: 0;
-    padding: 10px;
+    padding: 5px;
     font-size: 14px;
     text-align: center;
     font-family: 'Arial', sans-serif;
@@ -72,14 +71,20 @@ h3{
     align-items: center;
     justify-content: center;
     padding-top: 5%;
+    margin-left: 10%;
     .iconos_redes{
         width: 20%;
         font-size: 100%;
-
     }
 }
 .info{
-    margin-left: 10%;
-    width: 80%;
-    margin-top: 38%;
+    margin-left: 5%;
+    width: 90%;
+    margin-top: 37%;
+
+}
+.texto{
+    margin-top: 5%;
+    width: 100%;
+    font-size: 80%;
 }
