@@ -6,6 +6,9 @@
     border-radius: 0;
     overflow: hidden;
     position: relative;
+    img{
+        width: 100%;
+    }
     box-shadow:
         0 0 20px #0003,
         inset 0 0 10px #0003;
