@@ -1,0 +1,141 @@
+.song_details{
+    width: 100%;
+    display: flex;
+    overflow-y: scroll;
+    padding: 40px 35px;
+    justify-content: center;
+    height: 100%;
+    &_container{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.5em;
+        align-items: center;
+    
+    }
+
+    &_main{
+        width: 100%;
+        height: 350px;
+        display: flex;
+        align-items: flex-end;
+        gap: 1.4em;
+        padding-bottom: 20px;
+        &_img{
+            width: 230px;
+            height: 230px;
+            img{
+            height: 100%;
+            widows: 100%;
+            object-fit: contain;
+            }
+        }
+
+        &_details{
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+
+            p{
+                font-size: 12px;
+                font-weight: 600;
+            }
+            h2{
+                font-size: 90px;
+                font-weight: 900;
+                color: var(--secondary-color);
+                margin-bottom: 20px;
+
+            }
+
+            &_extras{
+                display: flex;
+                align-items: center;
+                gap: .4em;
+                img{
+                    width: 25px;
+                    height: 25px;
+                    border-radius: 50%;
+                }
+
+                i{
+                    font-size: 4px;
+                }
+            }
+        }
+    }
+
+    &_lyrics{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        gap: 1.8em;
+
+        &_controls{
+            display: flex;
+            align-items: center;
+            gap: 1.2em;
+        
+            &_play{
+                background-color: var(--primary-color);
+                height: 55px;
+                width: 55px;
+                padding: 15px;
+            }
+        
+            &_like{
+                width: 50px;
+                height: 50px;
+                padding: 10px;
+            }
+
+            i{
+
+                letter-spacing: 10px;
+                font-size: 30px;
+            }
+        }
+
+        &_main{
+            display: flex;
+            flex-direction: column;
+            gap: 1.6em;
+
+            h2{
+                color: var(--secondary-color);
+                font-size: 22px;
+            }
+            p{
+                width: 300px;
+                line-height: 30px;
+                color: var(--gray);
+                font-weight: 500;
+                font-size: 14px;
+            }
+        }
+    }
+
+    &_artist{
+        display: flex;
+        align-items: center;
+        gap: 1em;
+        margin-left: 10px;
+        img{
+            border-radius: 50%;
+            width: 85px;
+            height: 85px;
+        }
+        p{
+            font-size: 12px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        h2{
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--secondary-color);
+        }
+
+    }
+}

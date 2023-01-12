@@ -2,8 +2,26 @@
     width: 100%;
     display: flex;
     flex-wrap: wrap;
+    gap: 1.5em;
+    justify-content: center;
+    align-items: center;
+
+   
+}
+.songs_main_container{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     gap: 1.5em;
     justify-content: center;
     align-items: center;
+    &_title{
+        padding-left: 12px;
+        font-size: 30px;
+        color: var(--secondary-color);
+        display: flex;
+        align-self: flex-start;
+        width: 100%;
+    }
 }
