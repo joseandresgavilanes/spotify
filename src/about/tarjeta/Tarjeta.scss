@@ -1,4 +1,13 @@
 
+.mi-componente {
+    width: 80%;
+    opacity: 0;
+    transition: opacity 1s;
+  }
+  
+  .mi-componente-entrando {
+    opacity: 1;
+  }
 .card-vinyl {
     /* styles for the vinyl record card */
     width: 78%;
@@ -23,12 +32,9 @@
 }
 
 .card-title{
-    font-size: 90%;
+    font-size: 100%;
 }
-.container{
-    width: 80%;
-    padding: 0%;
-}
+
 .card-content {
     /* adjust content style*/
     padding: 5%;
@@ -80,9 +86,9 @@ h3{
 
 }
 .texto{
-    margin-top: 5%;
+    margin-top: 10%;
     width: 100%;
-    font-size: 80%;
+    font-size: 90%;
 }
 .fotos_about{
     width: 90%;
