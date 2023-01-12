@@ -1,3 +1,4 @@
+
 .card-vinyl {
     /* styles for the vinyl record card */
     width: 70%;
@@ -6,27 +7,26 @@
     border-radius: 0;
     overflow: hidden;
     position: relative;
-    img{
-        width: 100%;
-    }
     box-shadow:
         0 0 20px #0003,
         inset 0 0 10px #0003;
     };
 .card-image {
     /* create a central square*/
-    width: 60%;
-    height: 50%;
+    width: 30%;
+    height: 25%;
     background-color: #f3f3f3;
     border-radius: 0;
     position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    top: 15%;
+    background-size: cover;
+    left: 34%;
     box-shadow:
         inset -5px -5px 5px #fff5,
         inset 5px 5px 5px #0005;
+
 }
+
 .card-title{
     font-size: 110%;
 }
@@ -78,4 +78,8 @@ h3{
 
     }
 }
-
+.info{
+    margin-left: 10%;
+    width: 80%;
+    margin-top: 35%;
+}
