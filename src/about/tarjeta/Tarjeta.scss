@@ -1,6 +1,6 @@
 .card-vinyl {
     /* styles for the vinyl record card */
-    width: 350px;
+    width: 70%;
     height: 450px;
     background: #282828;
     border-radius: 0;
@@ -10,7 +10,6 @@
         0 0 20px #0003,
         inset 0 0 10px #0003;
     };
-
 .card-image {
     /* create a central square*/
     width: 60%;
@@ -27,6 +26,10 @@
 }
 .card-title{
     font-size: 110%;
+}
+.container{
+    width: 100%;
+    padding: 0%;
 }
 .card-content {
     /* adjust content style*/

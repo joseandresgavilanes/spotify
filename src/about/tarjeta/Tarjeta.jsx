@@ -1,10 +1,10 @@
-import React from 'react'
+import React,{ useState } from 'react'
 import "./Tarjeta.scss";
 
 const Tarjeta = (props) => {
     return (
         <div className='container'>
-            <div class="card-vinyl">
+                  <div class="card-vinyl">
                 <div class="card-image"><img src={props.foto}></img></div>
                 <div class="card-content">
                     <h2 class="card-title">{props.nombre}</h2>
@@ -23,11 +23,11 @@ const Tarjeta = (props) => {
                 </div>
                 <div class="card-footer">
                     <div class="vinyl-info">
-                        <h2><span>Meet me</span></h2>
+                        <h1><span>Meet me</span></h1>
                     </div>
                 </div>
             </div>
-    </div>
+            </div>
   )
 }
 
