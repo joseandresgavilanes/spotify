@@ -1,5 +1,5 @@
 import React,{ useState }  from 'react'
-import { EmailJSResponseStatus } from '@emailjs/browser';
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
     const [formData, setFormData] = useState({
@@ -41,7 +41,7 @@ const Contact = () => {
             message: !formData.message ? 'Este campo es requerido' : ''
           });
         } else {
-            emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', event.target, 'YOUR_USER_ID')
+            emailjs.sendForm('service_ovlhjgh', 'template_5waegri', event.target, 'yqN3nitUMC9bwLsQF')
             .then((result) => {
               console.log(result.text);
             }, (error) => {
