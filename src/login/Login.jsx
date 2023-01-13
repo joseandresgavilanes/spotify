@@ -39,17 +39,19 @@ const Login = () => {
 
   //submit//
 
-  const handleSubmit = (event) => {
-    loadUser(uname);
+  const handleSubmit = async (event) => {
+    
     //Prevent page reload
     event.preventDefault();
     // Find user login info
+    await loadUser(uname);
+
     
-    console.log("pasa el load user");
-    console.log(uname);
-    console.log(pass);
 
     if (userdb.nombre !== "") {
+      console.log("pasa el load user");
+      console.log(uname);
+      console.log(pass);
       console.log(userdb.contraseña);
       console.log(userdb.nombre);
       // Compare user info
