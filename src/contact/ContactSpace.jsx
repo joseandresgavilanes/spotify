@@ -52,7 +52,7 @@ const ContactSpace = () => {
                 sentI: 'Formulario no enviado'
             });
         } else {
-            emailjs.sendForm('service_ovlhjgh', 'template_5waegri', event.target, 'yqN3nitUMC9bwLsQF')
+            emailjs.sendForm(`service_ovlhjgh`, 'template_5waegri', event.target, 'TLrLOgeF50lkwtBmX')
                 .then((result) => {
                     setErrors({
                         sentC: 'Formulario enviado correctamente'
