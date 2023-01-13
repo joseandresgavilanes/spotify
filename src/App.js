@@ -9,6 +9,7 @@ import { Route, Routes } from "react-router-dom";
 import Home from "./home/Home";
 import Search from "./search/Search";
 import About from "./about/About";
+import Contact from "./contact/Contact";
 import LikedSongs from "./likedSongs/LikedSongs";
 import Library from "./library/Library";
 
@@ -25,8 +26,8 @@ function App() {
           <Route path="/library" element={<Library />} />
           <Route path="/favorites" element={<LikedSongs />} />
           <Route path="/upload-song" />
+          <Route path="/Contact" element={<Contact/>}/>
           <Route path="/About" element={<About />} />
-
           <Route path="/songs" element={<SongDetails />}>
             <Route path=":id" />
           </Route>
