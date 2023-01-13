@@ -10,6 +10,7 @@ import Home from "./home/Home";
 import Search from "./search/Search";
 import About from "./about/About";
 
+
 function App() {
   return (
     <div className="App">
