@@ -1,5 +1,6 @@
 import React,{ useState }  from 'react'
 import emailjs from '@emailjs/browser';
+import './Contact.scss'
 
 const Contact = () => {
     const [formData, setFormData] = useState({
@@ -52,56 +53,60 @@ const Contact = () => {
       };
     
       return (
-        <form onSubmit={handleSubmit}>
-          <label>
-            Nombre:
-            <input
+        <div className='formulario-espacio'>
+        <form onSubmit={handleSubmit} className='formulario_contenedor'>
+            <div className='formulario_nombres'>
+          <label className='formulario_label'>
+            <div className='formulario_letras'>Nombre:</div>
+            <input className='formulario_nombre'
               type="text"
               name="name"
               value={formData.name}
               onChange={handleChange}
               onBlur={handleBlur}
             />
-            {errors.name && <span>{errors.name}</span>}
+            <div className='formulario_errores'>{errors.name}</div>
           </label>
           <br />
-          <label>
-            Apellido:
-            <input
+          <label className='formulario_label'>
+          <div className='formulario_letras_apellido'>Apellido:</div> 
+            <input className='formulario_apellido'
               type="text"
               name="surname"
               value={formData.surname}
               onChange={handleChange}
               onBlur={handleBlur}
             />
-            {errors.surname && <span>{errors.surname}</span>}
+            {errors.surname && <div className='formulario_errores'>{errors.surname}</div>}
           </label>
+          </div>
           <br />
-          <label>
-            Correo:
-            <input
+          <label className='formulario_label'>
+          <div className='formulario_letras'>Correo:</div>
+            <input className='formulario_inputs'
               type="email"
               name="email"
               value={formData.email}
               onChange={handleChange}
               onBlur={handleBlur}
             />
-             {errors.email && <span>{errors.email}</span>}
+             {errors.email && <div className='formulario_errores'>{errors.email}</div>}
       </label>
       <br />
-      <label>
-        Mensaje:
+      <label className='formulario_label'>
+      <div className='formulario_letras'>Mensaje:</div>
         <textarea
           name="message"
           value={formData.message}
           onChange={handleChange}
           onBlur={handleBlur}
         />
-        {errors.message && <span>{errors.message}</span>}
+        {errors.message && <div className='formulario_errores'>{errors.message}</div>}
       </label>
       <br />
-      <button type="submit">Enviar</button>
+      <button type="submit" className='formulario_submit'>Enviar</button>
     </form>
+    </div>
   );
 }
 
