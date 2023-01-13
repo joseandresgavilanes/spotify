@@ -83,7 +83,7 @@ const Contact = () => {
           <br />
           <label className='formulario_label'>
           <div className='formulario_letras'>Correo:</div>
-            <input className='formulario_inputs'
+            <input className='formulario_inputs_correo'
               type="email"
               name="email"
               value={formData.email}
@@ -94,8 +94,8 @@ const Contact = () => {
       </label>
       <br />
       <label className='formulario_label'>
-      <div className='formulario_letras'>Mensaje:</div>
-        <textarea
+      <div className='formulario_letras_mensaje'>Mensaje:</div>
+        <textarea  className='formulario_inputs_textArea'
           name="message"
           value={formData.message}
           onChange={handleChange}
