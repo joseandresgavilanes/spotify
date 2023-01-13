@@ -14,7 +14,7 @@ const Tarjeta = (props) => {
         <div className={`mi-componente ${entrando ? 'mi-componente-entrando' : ''}`}>
             <div className="card-vinyl">
                 <div className='card_image_container'>
-                <div className="card-image" ><img className='fotos_about' src={imgUrl}/></div>
+                <div className="card-image" ><img className='fotos_about' src={imgUrl} alt='Foto de los autores'/></div>
                 </div>
                 <div className="card-content">
                     <h2 className="card-title">{props.nombre}</h2>
