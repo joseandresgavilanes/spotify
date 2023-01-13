@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 import "./Song.scss";
 
 const Song = () => {
-   const item = "";
+  
   return (
     <NavLink to={`/song/${item.id}`}>
       <div className="card">
