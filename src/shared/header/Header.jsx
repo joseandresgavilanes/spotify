@@ -43,7 +43,7 @@ const Header = () => {
             </svg>
             Search
           </NavLink>
-          <NavLink className="header_links_item" to="/">
+          <NavLink className="header_links_item" to="/library">
             <svg
               role="img"
               height="24"
@@ -99,8 +99,8 @@ const Header = () => {
           </NavLink>
           <div className="header_playlist">
             <NavLink className="header_playlist_item" to="/About">
-            <i class="fa-sharp fa-solid fa-users"></i>
-             About us
+              <i class="fa-sharp fa-solid fa-users"></i>
+              About us
             </NavLink>
           </div>
         </div>
