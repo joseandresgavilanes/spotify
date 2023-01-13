@@ -43,7 +43,7 @@ const Header = () => {
             </svg>
             Search
           </NavLink>
-          <NavLink className="header_links_item" to="/">
+          <NavLink className="header_links_item" to="/library">
             <svg
               role="img"
               height="24"
@@ -61,7 +61,7 @@ const Header = () => {
         </div>
 
         <div className="header_extras">
-          <NavLink className="header_links_item" to="/">
+          <NavLink className="header_links_item" to="/create-playlist">
             <div className="header_links_item_img">
               <svg
                 role="img"
@@ -77,7 +77,7 @@ const Header = () => {
                 ></path>
               </svg>
             </div>
-            Create a playlist
+            Create playlist
           </NavLink>
           <NavLink className="header_links_item" to="/favorites">
             <div className="header_links_item_img_2">
@@ -95,12 +95,12 @@ const Header = () => {
                 ></path>
               </svg>
             </div>
-            Your Favorites
+            Liked Songs
           </NavLink>
           <div className="header_playlist">
             <NavLink className="header_playlist_item" to="/About">
-            <i class="fa-sharp fa-solid fa-users"></i>
-             About us
+              <i class="fa-sharp fa-solid fa-users"></i>
+              About us
             </NavLink>
           </div>
         </div>
