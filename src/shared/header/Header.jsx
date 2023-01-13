@@ -8,7 +8,7 @@ const Header = () => {
         <NavLink className="header_logo" to="/">
           <img
             className="header_logo-img"
-            src="https://storage.googleapis.com/pr-newsroom-wp/1/2018/11/Spotify_Logo_RGB_White.png"
+            src="./images/krugerlogo.png"
             alt=""
           />
         </NavLink>
@@ -43,7 +43,7 @@ const Header = () => {
             </svg>
             Search
           </NavLink>
-          <NavLink className="header_links_item" to="/">
+          <NavLink className="header_links_item" to="/library">
             <svg
               role="img"
               height="24"
@@ -99,8 +99,8 @@ const Header = () => {
           </NavLink>
           <div className="header_playlist">
             <NavLink className="header_playlist_item" to="/About">
-            <i className="fa-sharp fa-solid fa-users"></i>
-             About us
+              <i class="fa-sharp fa-solid fa-users"></i>
+              About us
             </NavLink>
           </div>
           <NavLink className="header_playlist_item" to="/Contact">

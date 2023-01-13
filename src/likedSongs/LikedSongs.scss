@@ -1,0 +1,131 @@
+.liked{
+    width: 100%;
+    display: flex;
+    overflow-y: scroll;
+    padding: 40px 35px;
+    justify-content: center;
+    height: 100%;
+    &_container{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.5em;
+        align-items: center;
+    
+    }
+
+    &_main{
+        width: 100%;
+        display: flex;
+        align-items: flex-end;
+        gap: 1.4em;
+        padding-bottom: 70px;
+        &_img{
+            width: 230px;
+            height: 230px;
+            background: hsla(255, 92%, 50%, 1);
+
+            background: linear-gradient(270deg, hsla(255, 92%, 50%, 1) 0%, hsla(0, 0%, 46%, 1) 120%);
+            
+            background: -moz-linear-gradient(270deg, hsla(255, 92%, 50%, 1) 0%, hsla(0, 0%, 46%, 1) 120%);
+            
+            background: -webkit-linear-gradient(300deg, hsla(255, 92%, 50%, 1) 0%, hsla(0, 0%, 46%, 1) 80%);
+            
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 80px;
+        }
+
+        &_details{
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+
+            p{
+                font-size: 12px;
+                font-weight: 600;
+            }
+            h2{
+                font-size: 90px;
+                font-weight: 900;
+                color: var(--secondary-color);
+                margin-bottom: 20px;
+
+            }
+
+            &_extras{
+                display: flex;
+                align-items: center;
+                gap: .4em;
+                img{
+                    width: 25px;
+                    height: 25px;
+                    border-radius: 50%;
+                }
+
+                i{
+                    font-size: 4px;
+                }
+            }
+        }
+    }
+
+    &_songs{
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        gap: 1em;
+
+
+        &_song{
+            display: flex;
+            
+
+            &_info{
+                display: flex;
+                width: 100%;
+                align-items: center;
+                gap: 1em;
+                letter-spacing: 0px;
+                img{
+                    width: 45px;
+                    height: 45px;
+                }
+
+                &_content{
+                    display: flex;
+                    flex-direction: column;
+                    gap: .4em;
+                    width: 30%;
+                    h2{
+                        font-size: 14px;
+                        color: var(--secondary-color);
+                    }
+
+                    p{
+                        font-size: 12px;
+                    }
+                }
+
+                &_album{
+                    font-size: 14px;
+                    width: 30%;
+                    color: var(--gray);
+                }
+
+                &_extras{
+                    display: flex;
+                    align-items: center;
+                    gap: 2em;
+                    color: var(--gray);
+                }
+            }
+        }
+
+    }
+
+
+
+  
+}

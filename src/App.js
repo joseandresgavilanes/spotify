@@ -10,6 +10,8 @@ import Home from "./home/Home";
 import Search from "./search/Search";
 import About from "./about/About";
 import Contact from "./contact/Contact";
+import LikedSongs from "./likedSongs/LikedSongs";
+import Library from "./library/Library";
 
 function App() {
   return (
@@ -21,11 +23,11 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/search" element={<Search />} />
-          <Route path="/favorites" element={<SongDetails />} />
+          <Route path="/library" element={<Library />} />
+          <Route path="/favorites" element={<LikedSongs />} />
           <Route path="/upload-song" />
-          <Route path="/About" element={<About/>}/>
           <Route path="/Contact" element={<Contact/>}/>
-
+          <Route path="/About" element={<About />} />
           <Route path="/songs" element={<SongDetails />}>
             <Route path=":id" />
           </Route>
