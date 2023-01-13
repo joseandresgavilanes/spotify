@@ -99,10 +99,14 @@ const Header = () => {
           </NavLink>
           <div className="header_playlist">
             <NavLink className="header_playlist_item" to="/About">
-            <i class="fa-sharp fa-solid fa-users"></i>
+            <i className="fa-sharp fa-solid fa-users"></i>
              About us
             </NavLink>
           </div>
+          <NavLink className="header_playlist_item" to="/Contact">
+          <i class="fa-solid fa-address-card"></i>
+             Contact Us
+            </NavLink>
         </div>
 
         <div className="header_playlist">

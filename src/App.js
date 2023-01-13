@@ -9,6 +9,7 @@ import { Route, Routes } from "react-router-dom";
 import Home from "./home/Home";
 import Search from "./search/Search";
 import About from "./about/About";
+import Contact from "./contact/Contact";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           <Route path="/favorites" element={<SongDetails />} />
           <Route path="/upload-song" />
           <Route path="/About" element={<About/>}/>
+          <Route path="/Contact" element={<Contact/>}/>
 
           <Route path="/songs" element={<SongDetails />}>
             <Route path=":id" />
