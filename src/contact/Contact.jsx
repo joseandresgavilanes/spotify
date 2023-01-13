@@ -8,6 +8,7 @@ const Contact = () => {
   useEffect(() => {
     setEntrando(true);
   }, []);
+  
     const [formData, setFormData] = useState({
         name: '',
         surname: '',
@@ -68,9 +69,9 @@ const Contact = () => {
       };
     
       return (
-        <div className={`mi-formulario ${entrando ? 'mi-formulario-entrando' : ''}`}>
+
         <div className='formulario-espacio'>
-        <form onSubmit={handleSubmit} className='formulario_contenedor'>
+        <form onSubmit={handleSubmit} className={`formulario_contenedor ${entrando ? 'mi-formulario-entrando' : ''}`}>
         <div className='formulario_titulo'>Contactanos</div>
             <div className='formulario_nombres'>
           <label className='formulario_label'>
@@ -129,7 +130,6 @@ const Contact = () => {
         {errors.sentI && <div className='formulario_errores'>{errors.sentI}</div>}
         {errors.sentC && <div className='formulario_correcto'>{errors.sentC}</div>}
       </form>
-    </div>
     </div>
   );
 }
