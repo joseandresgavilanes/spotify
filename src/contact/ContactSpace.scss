@@ -195,13 +195,6 @@
 .formulario_correcto{
     color: #1DB954;
 }
-.formulario_titulo{
-    font-size: 100%;
-    font-weight: 600;
-    padding-top: 5%;
-    margin-left: 30%;
-    margin-bottom: 5%;
-}
 .titulo-formulario{
     padding-top: 5%;
     margin-left: 35%;
@@ -221,4 +214,100 @@
 }
 .final-formulario{
     padding-bottom: 3%;
+}
+@media only screen and (max-width: 768px){
+    .formulario_contenedor{
+        width: 70%;
+        margin-left: 20%;
+    }
+    .formulario_letras_correo{
+        margin-left: 30%;
+    }
+    .formulario_letras_nombre{
+        color: white;
+        font-size: 50%;
+        margin-left: 20%;
+    }
+    .formulario_letras_apellido{
+        font-size: 50%;
+        margin-left: 20%;
+    }
+    .formulario_letras_correo{
+        font-size: 60%;
+        margin-top: 0%;
+        margin-left: 40%;
+    }
+    .formulario_letras_mensaje{
+        font-size: 60%;
+        margin-left: 37%;
+    }
+    .titulo-formulario{
+        font-weight: 600;
+        padding-top: 5%;
+        margin-left: 15%;
+        margin-bottom: 5%;
+    }
+    .formulario-submit{
+        background-color: #1DB954;
+    }
+    .formulario_errores{
+        font-size: 60%;
+    }
+    .formulario_errores_apellido{
+        font-size: 60%;
+        width: 20%;
+    }
+    .formulario_errores_correo{
+        width: 50%;
+        margin-left: 10%;
+    }
+    .formulario_letras_mensaje{
+        margin-top: 15%;
+    }
+    .formulario-submit{
+        margin-top: 10%;
+        margin-bottom: 2%;
+    }
+
+}
+@media only screen and (min-width: 768px) and (max-width: 991px){
+    .formulario_contenedor{
+        width: 70%;
+        margin-left: 15%;
+        margin-top: 10%;
+    }
+    .formulario_letras_nombre{
+        margin-left: 20%;
+    }
+    .formulario_letras_apellido{
+        margin-left: 20%;
+    }
+    .formulario_letras_correo{
+        margin-top: 0%;
+        margin-left: 40%;
+    }
+    .formulario_letras_mensaje{
+        margin-left: 37%;
+    }
+    .titulo-formulario{
+        font-weight: 600;
+        padding-top: 5%;
+        margin-left: 34%;
+        margin-bottom: 2%;
+    }
+
+    .formulario_errores_correo{
+        margin-left: 18%;
+    }
+    .formulario_letras_mensaje{
+        margin-top: 10%;
+    }
+    .formulario_errores_mensaje{
+        margin-left: 19%;
+    }
+    .formulario-submit{
+        margin-top: 10%;
+        margin-bottom: 2%;
+    }
+
 }
