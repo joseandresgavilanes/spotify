@@ -61,6 +61,7 @@ const Contact = () => {
             <input className='formulario_nombre'
               type="text"
               name="name"
+              placeholder='Juan'
               value={formData.name}
               onChange={handleChange}
               onBlur={handleBlur}
@@ -73,6 +74,7 @@ const Contact = () => {
             <input className='formulario_apellido'
               type="text"
               name="surname"
+              placeholder='Sin Miedo'
               value={formData.surname}
               onChange={handleChange}
               onBlur={handleBlur}
@@ -86,6 +88,7 @@ const Contact = () => {
             <input className='formulario_inputs_correo'
               type="email"
               name="email"
+              placeholder='correo@correo.com'
               value={formData.email}
               onChange={handleChange}
               onBlur={handleBlur}
@@ -97,6 +100,7 @@ const Contact = () => {
       <div className='formulario_letras_mensaje'>Mensaje:</div>
         <textarea  className='formulario_inputs_textArea'
           name="message"
+          placeholder='Dinos, para que nos necesitas?'
           value={formData.message}
           onChange={handleChange}
           onBlur={handleBlur}
