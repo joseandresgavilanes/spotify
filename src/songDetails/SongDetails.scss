@@ -105,12 +105,15 @@
                 color: var(--secondary-color);
                 font-size: 22px;
             }
-            p{
+
+            &_text{
                 width: 300px;
-                line-height: 30px;
-                color: var(--gray);
-                font-weight: 500;
-                font-size: 14px;
+                p{
+                    line-height: 30px;
+                    color: var(--gray);
+                    font-weight: 500;
+                    font-size: 14px;
+                }
             }
         }
     }

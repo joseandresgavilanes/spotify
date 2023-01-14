@@ -2,7 +2,10 @@ import { useGetTopChartsQuery } from "../../redux/services/shazamCore";
 import Song from "./song/Song";
 import "./Songs.scss";
 const Songs = () => {
-  const { data } = useGetTopChartsQuery();
+  const { data, isFetching, error } = useGetTopChartsQuery();
+
+  if (isFetching) return "Loading";
+  if (error) return "Error";
 
   return (
     <div className="songs_main_container">

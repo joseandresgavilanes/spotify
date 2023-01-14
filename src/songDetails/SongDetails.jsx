@@ -1,26 +1,30 @@
 import React from "react";
+import { useParams } from "react-router-dom";
+import { useGetSongDetailsQuery } from "../redux/services/shazamCore";
 import "./SongDetails.scss";
 
-const songDetails = () => {
+const SongDetails = () => {
+  const { songid } = useParams();
+  const { data: songData, isFetching: isFetchingSongDetails } =
+    useGetSongDetailsQuery({ songid });
+
+  console.log(songData);
+
+  if (isFetchingSongDetails) return "Loading...";
+
   return (
     <div className="song_details">
       <div className="song_details_container">
         <div className="song_details_main">
           <div className="song_details_main_img">
-            <img
-              src="https://i1.sndcdn.com/artworks-zPkMQDQBvQ2G-0-t500x500.jpg"
-              alt=""
-            />
+            <img src={songData?.images.coverart} alt="" />
           </div>
           <div className="song_details_main_details">
             <p>SONG</p>
-            <h2>Killer</h2>
+            <h2>{songData?.title} </h2>
             <div className="song_details_main_details_extras">
-              <img
-                src="https://i.scdn.co/image/ab6761610000e5eba00b11c129b27a88fc72f36b"
-                alt=""
-              />
-              <p>Eminem</p>
+              <img src={songData?.images.background} alt="" />
+              <p>{songData?.subtitle}</p>
               <i class="fa-solid fa-circle"></i>
               <p>2020</p>
               <i class="fa-solid fa-circle"></i>
@@ -58,68 +62,21 @@ const songDetails = () => {
           </div>
           <div className="song_details_lyrics_main">
             <h2>Lyrics</h2>
-            <p>
-              Killer Yeah, it's crazy, I'm a (killer) Made all this money from
-              doin' this D.A. got that dope Now count it, five, ten, yeah,
-              fifteen, twenty Twenty-five, thirty, yeah, get the money Throw it
-              in the furnace, yeah, this shit be funny Earn it just to burn it,
-              swag drippin' from me That's what I do with money, got money up
-              the ass Call it toilet paper, yeah, flushed with cash Girl, nice
-              butt, is it up for grabs? Just wanna touch your ass, is that too
-              much to ask? Yeah I made it grip, I know it's tough to grasp, get
-              the bag Call it potato chips, I stuff in duffel bags On some
-              public transportation shit, 'cause I will bust your ass Fuck the
-              chain, I'm off the trailer hitch, I got a bunch of swag Now count
-              it, five, ten, yeah, fifteen, twenty Twenty-five, thirty, yeah,
-              get the money Throw it in the furnace, yeah, this shit be funny
-              Earn it just to burn it, swag drippin' from me Yeah, I'm a
-              (killer) Yeah, I'm a (what?), I'm a (what?), I'm a (killer) ♪
-              Yeah, look, yeah My income is all that and then some Girl, your
-              man is nincompoop, a symptom Of a simp 'cause he'll spend some
-              loot to get some As for me, I'm like Kim Jong-Un, a pimp, son Swag
-              dripping, I'm in a pub Went up to this chick, who was so tipsy, we
-              went to hug Ended up tripping, I picked her up She yelled out it's
-              her birthday She's fifty and in the club Then it comes on (yeah),
-              that "In da Club" song (yeah) She's a buzzsaw (what?), we goin'
-              numbskull (uh) I live on the edge, she's a jump off (yeah) Call
-              her Cinderella (why?), she loves balls (oh) Now count it, five,
-              ten, yeah, fifteen, twenty Twenty-five, thirty, yeah, get the
-              money Throw it in the furnace, yeah, this shit be funny Earn it
-              just to burn it, swag drippin' from me Yeah, I'm a (killer) Attack
-              like the Ripper All over the track doin' laps like a stripper Now
-              (now), now (now), we'll vow (vow) it out (out) Rap circles around
-              ('round), surround sound (Sound) John Rambo's back and my ammo
-              stacked And I'm cocking raps, I'm on your head Other words, I'm
-              stocking caps and I'm talking facts Like OfficeMax Never down,
-              I'll be up like an insomniac Girl, I got racks you gotta rack How
-              you got all that back and no body fat I'm in awe with that When I
-              stop the Pontiac at the laundry mat that I saw you at You almost
-              had a heart attack when you met Cardiac You ran inside, told your
-              boyfriend like, "I'll be back" But for all you know I probably act
-              like I'm Daniel Wozniak I'm a psycho-chopathic killer I'm a cap
-              peeler, caterpillar With the botanic of bananas you ain't never
-              heard Better vernacular comin' after your scapular For the lack of
-              a better word Dracula 'Cause I'm attackin' a rapper in the phrenic
-              nerve I'm a savage back, put the dagger in the back of competitors
-              Predator and scavenger I am a carnivore and a baller, you're at
-              the dollar store What the fuck you got a wallet for? Y'all are
-              poor I was livin' in squalor but uh-uh, not no more Now I'm the
-              one they holla for Fuckin' shit up like a dinosaur in a China
-              store Bitch, I'm number five (what?), minus four (haha) Now count
-              it, five, ten, yeah, fifteen, twenty Twenty-five, thirty, yeah,
-              get the money Throw it in the furnace, yeah, this shit be funny
-              Earn it just to burn it, swag drippin' from me Yeah, I'm a
-              (killer) Yeah, I'm a (what?), I'm a (what?), I'm a (killer) ♪ Yeah
-            </p>
+            <div className="song_details_lyrics_main_text">
+              {songData?.sections[1].type === "LYRICS" ? (
+                songData?.sections[1].text.map((line) => {
+                  return <p>{line}</p>;
+                })
+              ) : (
+                <p>No lyrics found!</p>
+              )}
+            </div>
           </div>
           <div className="song_details_artist">
-            <img
-              src="https://i.scdn.co/image/ab6761610000e5eba00b11c129b27a88fc72f36b"
-              alt=""
-            />
+            <img src={songData?.images.background} alt="" />
             <div className="song_details_artist_main">
               <p>ARTIST</p>
-              <h2>Eminem</h2>
+              <h2>{songData?.subtitle}</h2>
             </div>
           </div>
         </div>
@@ -128,4 +85,4 @@ const songDetails = () => {
   );
 };
 
-export default songDetails;
+export default SongDetails;
