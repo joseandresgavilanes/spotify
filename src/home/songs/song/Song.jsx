@@ -13,8 +13,8 @@ const Song = ({ item }) => {
           />
         </div>
         <div className="text">
-          <h2>Music to be...</h2>
-          <p>Eminem</p>
+          <h2>{item.title} </h2>
+          <p>{item.subtitle}</p>
         </div>
         <NavLink to={`/`}>
           <div className="play-icon">
