@@ -5,11 +5,17 @@
   max-width: 230px;
   height: 100%;
   background-color: var(--navbar);
+   @media (max-width: 700px) {
+    width: 60px;
+  }
 
   &_logo{
     width: 130px;
     height: 50px;
-   
+    @media (max-width: 700px) {
+      display: none;
+    }
+
 
     &-img{
       width: 100%;
@@ -24,6 +30,10 @@
     display: flex;
     flex-direction: column;
     gap: 1.3em;
+    @media (max-width: 700px) {
+      justify-content: center;
+      align-items: center;
+    }
     
     
     &_item{
@@ -31,6 +41,8 @@
       align-items: center;
       gap: 1em;
       margin-top: 1px;
+     
+      
       &_img{
         background-color: var(--gray);
         padding: 4px 7px;
@@ -55,17 +67,25 @@ background: -webkit-linear-gradient(360deg, hsla(255, 92%, 50%, 1) 0%, hsla(0, 0
     flex-direction: column;
     gap: 1em;
     margin-top: 15px;
+    @media (max-width: 700px) {
+      justify-content: center;
+      align-items: center;
+    }
   }
   &_playlist{
     display: flex;
     flex-direction: column;
     gap: 1em;
-
+    @media (max-width: 700px) {
+      justify-content: center;
+      align-items: center;
+    }
 
     &_item{
       display: flex;
       align-items: center;
       gap: .8em;
+     
       i{
         padding: 6px 4px;
         background-color: rgb(0,70,56);
@@ -96,4 +116,10 @@ background: -webkit-linear-gradient(360deg, hsla(255, 92%, 50%, 1) 0%, hsla(0, 0
   font-weight: 700;
   color: var(--gray);
 
+}
+
+.header_links_item_text{
+  @media (max-width: 700px) {
+    display: none;
+  }
 }

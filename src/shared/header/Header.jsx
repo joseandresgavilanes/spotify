@@ -8,7 +8,7 @@ const Header = () => {
         <NavLink className="header_logo" to="/">
           <img
             className="header_logo-img"
-            src="./images/krugerlogo.png"
+            src="https://storage.googleapis.com/pr-newsroom-wp/1/2018/11/Spotify_Logo_RGB_White.png"
             alt=""
           />
         </NavLink>
@@ -26,7 +26,7 @@ const Header = () => {
                 fill="currentColor"
               ></path>
             </svg>
-            Home
+            <p className="header_links_item_text">Home</p>
           </NavLink>
           <NavLink className="header_links_item" to="/search">
             <svg
@@ -41,7 +41,7 @@ const Header = () => {
                 fill="currentColor"
               ></path>
             </svg>
-            Search
+            <p className="header_links_item_text">Search</p>
           </NavLink>
           <NavLink className="header_links_item" to="/library">
             <svg
@@ -56,7 +56,7 @@ const Header = () => {
                 fill="currentColor"
               ></path>
             </svg>
-            Your library
+            <p className="header_links_item_text">Your library</p>
           </NavLink>
         </div>
 
@@ -77,7 +77,7 @@ const Header = () => {
                 ></path>
               </svg>
             </div>
-            Create a playlist
+            <p className="header_links_item_text">Create a playlist</p>
           </NavLink>
           <NavLink className="header_links_item" to="/favorites">
             <div className="header_links_item_img_2">
@@ -95,30 +95,24 @@ const Header = () => {
                 ></path>
               </svg>
             </div>
-            Your Favorites
+            <p className="header_links_item_text">Your Favorites</p>
           </NavLink>
           <div className="header_playlist">
             <NavLink className="header_playlist_item" to="/About">
               <i class="fa-sharp fa-solid fa-users"></i>
-              About us
+              <p className="header_links_item_text">About us</p>
             </NavLink>
           </div>
           <NavLink className="header_playlist_item" to="/Contact">
-          <i class="fa-solid fa-address-card"></i>
-             Contact Us
-            </NavLink>
+            <i class="fa-solid fa-address-card"></i>
+            <p className="header_links_item_text">Contact Us</p>
+          </NavLink>
         </div>
 
         <div className="header_playlist">
           <div className="header_line"></div>
           <NavLink className="header_links_item" to="/">
-            My Playlist #1
-          </NavLink>
-          <NavLink className="header_links_item" to="/">
-            My Playlist #2
-          </NavLink>
-          <NavLink className="header_links_item" to="/">
-            My Playlist #3
+            <p className="header_links_item_text">My Playlist #1</p>
           </NavLink>
         </div>
       </div>

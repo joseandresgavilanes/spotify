@@ -42,7 +42,15 @@
                 
                 background: -webkit-linear-gradient(320deg, hsla(255, 92%, 50%, 1) 0%, rgb(188, 188, 188) 120%);
                 border-radius: 8px;
+                @media (max-width: 700px) {
+                    height: 260px;
+                width: 300px;
+                  }
 
+                  @media (max-width: 500px) {
+                    height: 260px;
+                width: 250px;
+                  }
                 &_content{
                     display: flex;
                     flex-direction: column;

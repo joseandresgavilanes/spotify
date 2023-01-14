@@ -1,12 +1,16 @@
 @media only screen and (min-width: 991px) {
-    
+    .about_main_container{
+        width: 100%;
+        display: flex;
+        overflow-y: scroll;
+        padding: 40px 35px;
+        justify-content: center;
+    }
     .container-about{
         width: 80%;
         margin-left: 5%;
     }
-    .about{
-        overflow-y: scroll;
-    }
+    
     .superiores{
         width: 95%;
         height: 30%;
@@ -26,9 +30,16 @@
 
 
 @media only screen and (max-width: 768px) {
-    .about{
+    .about_main_container{
+        width: 100%;
+        display: flex;
         overflow-y: scroll;
+        padding: 40px 35px;
+        justify-content: center;
+
+        
     }
+ 
     .superiores{
         width: 90%;
         display: block;
@@ -44,8 +55,12 @@
     }
   }
   @media only screen and (min-width: 768px) and (max-width: 991px) {
-    .about{
+    .about_main_container{
+        width: 100%;
+        display: flex;
         overflow-y: scroll;
+        padding: 40px 35px;
+        justify-content: center;
     }
     .superiores{
         width: 90%;
