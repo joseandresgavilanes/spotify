@@ -12,6 +12,7 @@ import About from "./about/About";
 import Contact from "./contact/Contact";
 import LikedSongs from "./likedSongs/LikedSongs";
 import Library from "./library/Library";
+import AboutMe from "./home/aboutMe/AboutMe";
 
 function App() {
   return (
@@ -26,8 +27,9 @@ function App() {
           <Route path="/library" element={<Library />} />
           <Route path="/favorites" element={<LikedSongs />} />
           <Route path="/upload-song" />
-          <Route path="/Contact" element={<Contact/>}/>
+          <Route path="/Contact" element={<Contact />} />
           <Route path="/About" element={<About />} />
+          <Route path="/about-me" element={<AboutMe />} />
           <Route path="/songs" element={<SongDetails />}>
             <Route path=":id" />
           </Route>
