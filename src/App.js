@@ -13,6 +13,7 @@ import Contact from "./contact/Contact";
 import LikedSongs from "./likedSongs/LikedSongs";
 import Library from "./library/Library";
 import AboutMe from "./home/aboutMe/AboutMe";
+import SearchView from "./search/SearchView";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/search" element={<Search />} />
+          <Route path="/search/:searchTerm" element={<SearchView />} />
           <Route path="/library" element={<Library />} />
           <Route path="/favorites" element={<LikedSongs />} />
           <Route path="/upload-song" />

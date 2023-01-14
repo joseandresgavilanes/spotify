@@ -1,5 +1,6 @@
 import React from "react";
 import { useParams } from "react-router-dom";
+import Loader from "../loader/Loader";
 import { useGetSongDetailsQuery } from "../redux/services/shazamCore";
 import "./SongDetails.scss";
 
@@ -10,7 +11,7 @@ const SongDetails = () => {
 
   console.log(songData);
 
-  if (isFetchingSongDetails) return "Loading...";
+  if (isFetchingSongDetails) return <Loader />;
 
   return (
     <div className="song_details">
