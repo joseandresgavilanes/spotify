@@ -1,0 +1,52 @@
+:focus{
+    border-color: #1ED760;
+}
+.container_form {
+    background-color: rgba(26, 26, 26, 0.686);
+    display: flex;
+    flex-direction: column;
+    width: 25.5rem;
+    border-radius: 2.3rem;
+    padding: 4rem 2rem 4rem 3rem;
+    justify-content: center;
+    transition: all 0.4s;
+    cursor: pointer;
+    gap: 2em;
+    margin: auto;
+    text-align: center;
+    align-items: center;
+}
+
+h3{
+text-decoration-line: underline;
+text-decoration-color: #1ED760;
+text-decoration-thickness: 2px;
+}
+
+.container_form_logo{
+    width: 200px;
+}
+
+.form_logo-img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.input-container{
+    padding: 1em;
+}
+
+.input-container input{
+    padding: 0.5em;
+    border-radius: 1em;
+}
+
+button{
+width: 80%;
+padding: .5em;
+border-radius: 1em;
+background-color: #1ED760;
+color: #fff;
+padding: 0.5em;
+}

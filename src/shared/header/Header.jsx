@@ -115,7 +115,7 @@ const Header = () => {
             <p className="header_links_item_text">My Playlist #1</p>
           </NavLink>
         </div>
-      </div>
+   </div>
     </header>
   );
 };
