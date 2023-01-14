@@ -1,7 +1,4 @@
-import axios from "axios";
-import React, { useEffect, useState } from "react";
 import { useGetTopChartsQuery } from "../../redux/services/shazamCore";
-import { songsData } from "./dummy";
 import Song from "./song/Song";
 import "./Songs.scss";
 const Songs = () => {
