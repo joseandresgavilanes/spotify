@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import "./Login.scss"
 
 const Login = () => {
   // React States
@@ -56,44 +57,50 @@ const Login = () => {
 
   // JSX code for login form
   const renderForm = (
-    <div className="form">
-      <form onSubmit={handleSubmit}>
-        <div className="input-container">
-          <label>Username </label>
-          <input
-            type="text"
-            name="uname"
-            placeholder="e-mail ..."
-            required
-            onChange={(e) => setUname(e.target.value)}
-            value={uname}
-          />
-          {renderErrorMessage("uname")}
-        </div>
-        <div className="input-container">
-          <label>Password </label>
-          <input
-            type="password"
-            name="pass"
-            placeholder="Password .."
-            required
-            onChange={(e) => setPass(e.target.value)}
-            value={pass}
-          />
-         {renderErrorMessage("pass")}
-        </div>
-        <button type="submit">Login</button>
-      </form>
-    </div>
+    <form onSubmit={handleSubmit}>
+      <div className="input-container">
+       
+        <input
+          type="text"
+          name="uname"
+          placeholder="E-mail"
+          required
+          onChange={(e) => setUname(e.target.value)}
+          value={uname}
+        />
+        {renderErrorMessage("uname")}
+      </div>
+      <div className="input-container">
+        
+        <input
+          type="password"
+          name="pass"
+          placeholder="Password"
+          required
+          onChange={(e) => setPass(e.target.value)}
+          value={pass}
+        />
+        {renderErrorMessage("pass")}
+      </div>
+      <button type="submit">SING IN</button>
+    </form>
   );
 
-  return     <div>
-  <div>
-    <div></div>
-    <h1> Sign In</h1>
-    {isSubmitted ? <div>User is successfully logged in</div> : renderForm}
-  </div>
-</div>;
+  return (
+    <div className="container_form">
+      <div className="container_form_logo">
+        <img
+          className="form_logo-img"
+          src="https://storage.googleapis.com/pr-newsroom-wp/1/2018/11/Spotify_Logo_RGB_White.png"
+          alt=""
+        />
+      </div>
+      <div>
+      <h3> SING IN</h3>
+        {isSubmitted ? <div>User is successfully logged in</div> : renderForm}
+      </div>
+    </div>
+  );
 };
 
 export default Login;
