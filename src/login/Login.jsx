@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { Redirect } from 'react-router-dom';
 import "./Login.scss"
+import useLocalStorage from "../context/useLocalStorage";
 
 const Login = () => {
   // React States
@@ -11,7 +11,6 @@ const Login = () => {
   const [pass, setPass] = useState("");
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
-
   //Load User
   useEffect(() => {
     if (uname) {
@@ -43,6 +42,7 @@ const Login = () => {
     if (userdb) {
       if (userdb.correo === uname && userdb.contraseña === pass) {
         console.log("usuario y contraseña correctos");
+        localStorage.setItem('user',JSON.stringify(userdb));
         setIsSubmitted(true);
         setIsLoggedIn(true);
       } else if (userdb.correo !== uname) {
