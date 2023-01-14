@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import { Redirect } from 'react-router-dom';
 import "./Login.scss"
 
 const Login = () => {
@@ -9,6 +10,7 @@ const Login = () => {
   const [uname, setUname] = useState("");
   const [pass, setPass] = useState("");
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   //Load User
   useEffect(() => {
@@ -20,6 +22,11 @@ const Login = () => {
         });
     }
   }, [uname]);
+  useEffect(() => {
+    if (isLoggedIn) {
+      window.location.href = '/home';
+    }
+  }, [isLoggedIn]);
 
   /* constantes  para errores de login */
   const errors = {
@@ -37,6 +44,7 @@ const Login = () => {
       if (userdb.correo === uname && userdb.contraseña === pass) {
         console.log("usuario y contraseña correctos");
         setIsSubmitted(true);
+        setIsLoggedIn(true);
       } else if (userdb.correo !== uname) {
         // Nombre de Usuario no Encontrado
         setErrorMessages({ name: "uname", message: errors.uname });

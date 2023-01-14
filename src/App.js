@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useState, useEffect} from "react";
 import "./App.css";
 import Header from "./shared/header/Header";
 import Footer from "./shared/footer/Footer";
@@ -15,31 +15,40 @@ import Library from "./library/Library";
 import AboutMe from "./home/aboutMe/AboutMe";
 import AboutMeContent from "./AboutMeContent/AboutMeContent";
 
+
 function App() {
+  const [isHidden, setIsHidden] = useState(false);
+  useEffect(() => {
+    if (window.location.pathname==="/" || window.location.pathname==="/register") {
+      setIsHidden(true)
+    }
+  });
   return (
+
     <div className="App">
-      <div className="Nav">
-        <Header />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/register" element={<Register />} />
-          <Route path="/search" element={<Search />} />
-          <Route path="/library" element={<Library />} />
-          <Route path="/favorites" element={<LikedSongs />} />
-          <Route path="/upload-song" />
-          <Route path="/AboutMe" element={<AboutMeContent/>}/>
-          <Route path="/Contact" element={<Contact />} />
-          <Route path="/About" element={<About />} />
-          <Route path="/about-me" element={<AboutMe />} />
-          <Route path="/songs" element={<SongDetails />}>
-            <Route path=":id" />
-          </Route>
-        </Routes>
+      <Routes>
+      <Route path="/" element={<Login />} />
+      <Route path="/register" element={<Register />} />
+      </Routes>
+      <div className={`Nav ${isHidden ? 'hidden' : ''}`}>
+      <Header />
+      <Routes>
+        <Route path="/home" element={<Home />} />
+        <Route path="/search" element={<Search />} />
+        <Route path="/library" element={<Library />} />
+        <Route path="/favorites" element={<LikedSongs />} />
+        <Route path="/upload-song" />
+        <Route path="/AboutMe" element={<AboutMeContent />} />
+        <Route path="/Contact" element={<Contact />} />
+        <Route path="/About" element={<About />} />
+        <Route path="/about-me" element={<AboutMe />} />
+        <Route path="/songs" element={<SongDetails />}/>
+        <Route path=":id" />
+      </Routes>
       </div>
-      <div className="Footer_Container">
-        <Footer />
-      </div>
+      <div className={`Footer_Container ${isHidden ? 'hidden' : ''}`}>
+      <Footer />
+    </div>
     </div>
   );
 }

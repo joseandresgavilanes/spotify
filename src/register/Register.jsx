@@ -3,11 +3,6 @@ import axios from "axios";
 import React from "react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-
-import React, { useState } from 'react'
-import axios from "axios";
-
- 
 const Register = () => {
     const [nombre, setNombre] = useState("");
     const [apellido, setApellido] = useState("");
@@ -16,13 +11,19 @@ const Register = () => {
     const [contraseña, setContraseña] = useState("");
     const [foto, setFoto] = useState("");
     const [fotopre, setFotopre] = useState("");
-  
+   /*  const [registration, setRegistration] = useState({ 
+        nombre :'',
+        artistname :'',
+        apellido :'',
+        correo :'',
+        contraseña :'',
+        foto :'',});     */
+
     const navigate = useNavigate();
 
     function handleChange(e) {
       const name = e.target.name;
       const value = e.target.value;
-
       switch (name) {
           case 'nombre':
               setNombre(value);
@@ -43,7 +44,6 @@ const Register = () => {
               break;
       }
     }
-
     function handleFile(e) {
       const element = e.target;
       const file = element.files[0];
@@ -61,10 +61,8 @@ const Register = () => {
      setFoto( auxiliar[1]);    
      }
   }
-
   function handleSubmit(e) {
     e.preventDefault();
-
     const registration = {
       nombre,
       artistname,
@@ -91,7 +89,6 @@ const Register = () => {
       //store.createItem(newBook);
     }
   }
-
   return (
     <div>
       <h3>REGISTER</h3>
@@ -128,77 +125,5 @@ const Register = () => {
             </form>
     </div>
   )
-
 };
-
 export default Register;
-    const [name, setName] = useState('');
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
-    const [confPassword, setConfPassword] = useState('');
-    const [msg, setMsg] = useState('');
-   
- 
-    const Register = async (e) => {
-        e.preventDefault();
-        try {
-            await axios.post('url', {
-                name: name,
-                email: email,
-                password: password,
-                confPassword: confPassword
-            });
-            
-        } catch (error) {
-            if (error.response) {
-                setMsg(error.response.data.msg);
-            }
-        }
-    }
- 
-    return (
-        <section >
-            <div >
-                <div >
-                    <div >
-                        <div >
-                            <form onSubmit={Register} >
-                                <p >{msg}</p>
-                                <div >
-                                    <label >Name</label>
-                                    <div >
-                                        <input type="text" className="input" placeholder="Name"
-                                            value={name} onChange={(e) => setName(e.target.value)} />
-                                    </div>
-                                </div>
-                                <div >
-                                    <label >Email</label>
-                                    <div>
-                                        <input type="text" className="input" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} />
-                                    </div>
-                                </div>
-                                <div >
-                                    <label >Password</label>
-                                    <div >
-                                        <input type="password" className="input" placeholder="******" value={password} onChange={(e) => setPassword(e.target.value)} />
-                                    </div>
-                                </div>
-                                <div >
-                                    <label>Confirm Password</label>
-                                    <div>
-                                        <input type="password"  placeholder="******" value={confPassword} onChange={(e) => setConfPassword(e.target.value)} />
-                                    </div>
-                                </div>
-                                <div >
-                                    <button >Register</button>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    )
-}
- 
-export default Register

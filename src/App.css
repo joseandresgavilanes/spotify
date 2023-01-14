@@ -16,5 +16,8 @@
   height: 15%;
   max-height: 120px;
 }
+.hidden {
+  display: none;
+}
 
 
