@@ -16,7 +16,7 @@ const AboutMeContent = () => {
         email: 'johndoe@example.com',
         password:'Latano123',
         nickname: 'JDoe',
-        photoUrl: './images/Adrian.jpg',
+        photoUrl: './logo192.png',
     });
     const [imageFile, setImageFile] = useState(null);
 
