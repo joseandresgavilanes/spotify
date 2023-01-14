@@ -11,13 +11,7 @@ const Register = () => {
     const [contraseña, setContraseña] = useState("");
     const [foto, setFoto] = useState("");
     const [fotopre, setFotopre] = useState("");
-   /*  const [registration, setRegistration] = useState({ 
-        nombre :'',
-        artistname :'',
-        apellido :'',
-        correo :'',
-        contraseña :'',
-        foto :'',});     */
+  
     const navigate = useNavigate();
 
     function handleChange(e) {
