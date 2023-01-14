@@ -32,9 +32,7 @@ function App() {
           <Route path="/Contact" element={<Contact />} />
           <Route path="/About" element={<About />} />
           <Route path="/about-me" element={<AboutMe />} />
-          <Route path="/songs" element={<SongDetails />}>
-            <Route path=":id" />
-          </Route>
+          <Route path="/songs/:songid" element={<SongDetails />} />
         </Routes>
       </div>
       <div className="Footer_Container">
