@@ -7,14 +7,11 @@ const Song = ({ item }) => {
     <NavLink to={`/song/`}>
       <div className="card">
         <div className="img-holder">
-          <img
-            src="https://upload.wikimedia.org/wikipedia/en/3/35/The_Eminem_Show.jpg"
-            alt=""
-          />
+          <img src={item.images?.coverart} alt="" />
         </div>
         <div className="text">
-          <h2>Music to be...</h2>
-          <p>Eminem</p>
+          <h2>{item.title} </h2>
+          <p>{item.subtitle}</p>
         </div>
         <NavLink to={`/`}>
           <div className="play-icon">
