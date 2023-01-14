@@ -8,10 +8,6 @@ const AboutMeContent = () => {
     const handleButtonClick = () => {
         fileInputRef.current.click();
     };
-    const handleFileChange = (e) => {
-        console.log(e.target.files[0]);
-        // handle the file here
-    };
     const [editing, setEditing] = useState(false);
     const [user, setUser] = useState({
         id: 12345,
@@ -71,7 +67,7 @@ const AboutMeContent = () => {
                     <div className='AboutMe_user_info'>
                         <div className='aboutMe_user_columnas'>
                             <p>User Id:</p>
-                            <p>{user.id}</p>
+                            <h2 className='AboutMe_userId_text'>{user.id}</h2>
                         </div>
                         <div className='aboutMe_user_columnas'>
                             <p>Name:</p>
