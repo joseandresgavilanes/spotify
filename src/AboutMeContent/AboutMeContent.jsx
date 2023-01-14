@@ -8,10 +8,11 @@ const AboutMeContent = () => {
                 <div className='aboutMe_image_container'>
                     <div className="about_imagen_usuario" style={{ backgroundImage: "url('./logo192.png')" }}>
                     </div>
+                    <div className='about_id_user'>
+                    <p>8b03b2b2</p>
                 </div>
-                <div className='about_id_user'>
-                    @jfjfjfj
                 </div>
+
             </div>
         </div>
     )
