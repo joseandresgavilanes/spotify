@@ -1,34 +1,24 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 
 const Login = () => {
   // React States
-  const [userdb, setUserdb] = useState([]);
+  const [userdb, setUserdb] = useState(null);
   const [errorMessages, setErrorMessages] = useState({});
   const [uname, setUname] = useState("");
   const [pass, setPass] = useState("");
   const [isSubmitted, setIsSubmitted] = useState(false);
 
   //Load User
-  async function loadUser(user) {
-    try { await  axios
-        .get(
-          `https://loggin-api-production.up.railway.app/usuarios/correo/${user}`
-        )
-        .then((json) => {
-          console.log(json.data);
-          setUserdb(json.data);
-        }); 
-
-      /* const request = await fetch(
-        `https://loggin-api-production.up.railway.app/usuarios/correo/${user}`
-        );
-        const json = await request.json();
-        setUserdb(json);
-        console.log(json);  */
-    } catch (error) {}
-  }
+  useEffect(() => {
+    if (uname) {
+      axios
+        .get(`https://loggin-api-production.up.railway.app/usuarios/correo/${uname}`)
+        .then((response) => {
+          setUserdb(response.data);
+        });
+    }
+  }, [uname]);
 
   /* constantes  para errores de login */
   const errors = {
@@ -37,46 +27,28 @@ const Login = () => {
     data: "el usuario no existe en nuestra base",
   };
 
-  //submit//
-
-  const handleSubmit = async (event) => {
-    
+  //submit
+  const handleSubmit = (event) => {
     //Prevent page reload
     event.preventDefault();
-    // Find user login info
-    await loadUser(uname);
 
-    
-
-    if (userdb.nombre !== "") {
-      console.log("pasa el load user");
-      console.log(uname);
-      console.log(pass);
-      console.log(userdb.contraseña);
-      console.log(userdb.nombre);
-      // Compare user info
-
-      if (userdb) {
-        if (userdb.correo === uname && userdb.contraseña === pass) {
-          console.log("usuario y contraseña correctos");
-          setIsSubmitted(true);
-        }
-        if (userdb.correo !== uname) {
-          // Nombre de Usuario no Encontrado
-          setErrorMessages({ name: "uname", message: errors.uname });
-          } else 
-           {
-              // Invalid password
-              setErrorMessages({ name: "pass", message: errors.pass });
-              }
-              } 
-      else {
-        setErrorMessages({ name: "uname", message: errors.data });
+    if (userdb) {
+      if (userdb.correo === uname && userdb.contraseña === pass) {
+        console.log("usuario y contraseña correctos");
+        setIsSubmitted(true);
+      } else if (userdb.correo !== uname) {
+        // Nombre de Usuario no Encontrado
+        setErrorMessages({ name: "uname", message: errors.uname });
+      } else {
+        // Invalid password
+        setErrorMessages({ name: "pass", message: errors.pass });
       }
+    } else {
+      setErrorMessages({ name: "uname", message: errors.data });
     }
   };
-  // generar mensaje de error
 
+  // generar mensaje de error
   const renderErrorMessage = (name) =>
     name === errorMessages.name && (
       <div className="error">{errorMessages.message}</div>
@@ -108,25 +80,20 @@ const Login = () => {
             onChange={(e) => setPass(e.target.value)}
             value={pass}
           />
-          {renderErrorMessage("pass")}
+         {renderErrorMessage("pass")}
         </div>
-        <div className="button-container">
-          <button type="submit"> LogIn</button>
-          <button>Register</button>
-        </div>
+        <button type="submit">Login</button>
       </form>
     </div>
   );
 
-  return (
-    <div>
-      <div>
-        <div></div>
-        <h1> Sign In</h1>
-        {isSubmitted ? <div>User is successfully logged in</div> : renderForm}
-      </div>
-    </div>
-  );
+  return     <div>
+  <div>
+    <div></div>
+    <h1> Sign In</h1>
+    {isSubmitted ? <div>User is successfully logged in</div> : renderForm}
+  </div>
+</div>;
 };
 
 export default Login;
