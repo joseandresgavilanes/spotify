@@ -1,4 +1,4 @@
-import React,{useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import "./App.css";
 import Header from "./shared/header/Header";
 import Footer from "./shared/footer/Footer";
@@ -16,8 +16,6 @@ import AboutMe from "./home/aboutMe/AboutMe";
 import AboutMeContent from "./AboutMeContent/AboutMeContent";
 import SearchView from "./search/SearchView";
 
-
-
 function App() {
   const [isHidden, setIsHidden] = useState(false);
   useEffect(() => {
@@ -27,13 +25,13 @@ function App() {
     ) {
       setIsHidden(true);
     }
-  });
-  return (
+  }, []);
 
+  return (
     <div className="App">
       <Routes>
-      <Route path="/" element={<Login />} />
-      <Route path="/register" element={<Register />} />
+        <Route path="/" element={<Login />} />
+        <Route path="/register" element={<Register />} />
       </Routes>
       <div className={`Nav ${isHidden ? "hidden" : ""}`}>
         <Header />
@@ -51,9 +49,9 @@ function App() {
           <Route path="/songs/:songid" element={<SongDetails />} />
         </Routes>
       </div>
-      <div className={`Footer_Container ${isHidden ? 'hidden' : ''}`}>
-      <Footer />
-    </div>
+      <div className={`Footer_Container ${isHidden ? "hidden" : ""}`}>
+        <Footer />
+      </div>
     </div>
   );
 }
