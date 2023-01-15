@@ -4,7 +4,7 @@ import "./Song.scss";
 
 const Song = ({ item }) => {
   return (
-    <NavLink to={`/song/`}>
+    <NavLink to={`/songs/${item.key}`}>
       <div className="card">
         <div className="img-holder">
           <img src={item.images?.coverart} alt="" />

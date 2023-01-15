@@ -16,11 +16,19 @@
 
     &_main{
         width: 100%;
-        height: 350px;
         display: flex;
         align-items: flex-end;
         gap: 1.4em;
         padding-bottom: 20px;
+
+        @media (max-width: 800px) {
+            flex-direction: column;
+            align-items: flex-start;
+            
+
+        }
+
+    
         &_img{
             width: 230px;
             height: 230px;
@@ -45,7 +53,9 @@
                 font-weight: 900;
                 color: var(--secondary-color);
                 margin-bottom: 20px;
-
+                @media (max-width: 600px) {
+                    font-size: 50px;
+                }
             }
 
             &_extras{
@@ -105,12 +115,15 @@
                 color: var(--secondary-color);
                 font-size: 22px;
             }
-            p{
+
+            &_text{
                 width: 300px;
-                line-height: 30px;
-                color: var(--gray);
-                font-weight: 500;
-                font-size: 14px;
+                p{
+                    line-height: 30px;
+                    color: var(--gray);
+                    font-weight: 500;
+                    font-size: 14px;
+                }
             }
         }
     }
