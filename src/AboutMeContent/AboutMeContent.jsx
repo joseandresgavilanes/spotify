@@ -43,6 +43,7 @@ const AboutMeContent = () => {
     }
 
         const handleSaveClick = async () => {
+            setEditing(!editing);
             const datosActualizados={
                 id:user.id,
                 nombre: user.nombre,
@@ -67,6 +68,7 @@ const AboutMeContent = () => {
             .then((response) => {
                 localStorage.setItem('user',JSON.stringify(response.data));            
             });
+
         }
 
         return (
