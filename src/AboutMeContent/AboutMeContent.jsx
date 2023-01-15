@@ -60,7 +60,7 @@ const AboutMeContent = () => {
         <div className='about_user_scroll'>
             <div className='aboutMe_user'>
                 <div className="user-container">
-                    <img className="user-photo rounded-circle" src={user.photoUrl} alt="User Photo" />
+                    <img className="user-photo rounded-circle" src={user.photoUrl} alt="User Picture" />
                     <button className='aboutMe_editar_foto' onClick={handleButtonClick} style={{ display: editing ? 'block' : 'none' }}><i class="fa-solid fa-pen-to-square"></i></button>
                     <input type="file" ref={fileInputRef} onChange={handlePhotoChange} style={{display: 'none'}} />
                     <h1>Account overview</h1>

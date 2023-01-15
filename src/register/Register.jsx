@@ -1,7 +1,7 @@
 
 import axios from "axios";
 import React from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 const Register = () => {
     const [nombre, setNombre] = useState("");
@@ -11,14 +11,27 @@ const Register = () => {
     const [contraseña, setContraseña] = useState("");
     const [foto, setFoto] = useState("");
     const [fotopre, setFotopre] = useState("");
-   /*  const [registration, setRegistration] = useState({ 
-        nombre :'',
-        artistname :'',
-        apellido :'',
-        correo :'',
-        contraseña :'',
-        foto :'',});     */
-
+    const [repetido, setRepetido] = useState(false); 
+    const [errorMessages, setErrorMessages] = useState({});
+ 
+    useEffect(() => {
+      if (correo) {
+        axios
+          .get(`https://loggin-api-production.up.railway.app/usuarios/correo/${correo}`)
+          .then((response) => {
+            console.log(response.data);
+           /*  if(response){
+             setRepetido(true);
+             setErrorMessages({ name: "correo", message: errors.correo });
+            } */
+          });
+      }
+    }, [correo]);
+    
+     /* constantes  para errores de login */
+  const errors = {
+    correo: "este correo ya existe en nuestra base",
+  };
     const navigate = useNavigate();
 
     function handleChange(e) {
@@ -32,8 +45,11 @@ const Register = () => {
               setApellido(value);
               break;
           case 'correo':
+            if(repetido){
+              break;}
+            else {
               setCorreo(value);
-              break;
+              break;}
           case 'contraseña':
               setContraseña(value);
               break;
@@ -44,6 +60,13 @@ const Register = () => {
               break;
       }
     }
+
+  // generar mensaje de error
+  const renderErrorMessage = (name) =>
+  name === errorMessages.name && (
+    <div className="error">{errorMessages.message}</div>    
+  );
+
     function handleFile(e) {
       const element = e.target;
       const file = element.files[0];
@@ -61,6 +84,7 @@ const Register = () => {
      setFoto( auxiliar[1]);    
      }
   }
+
   function handleSubmit(e) {
     e.preventDefault();
     const registration = {
@@ -89,39 +113,43 @@ const Register = () => {
       //store.createItem(newBook);
     }
   }
+
+
   return (
-    <div>
+    <div className="container_form">
       <h3>REGISTER</h3>
     <form onSubmit={handleSubmit} className="">
-                <div className= "">
-                    <div className="" >Nombre</div>
-                    <input className="" type='text' name='nombre' required onChange={handleChange} value={nombre} />
+                <div className= "input-container">
+                    
+                    <input className="" type='text' name='nombre' required placeholder="Nombre" onChange={handleChange} value={nombre} />
                 </div>
-                <div className= "">
-                    <div className="">Apellido</div>
-                    <input className="" type='text' name='apellido' required onChange={handleChange} value={apellido} />
+                <div className= "input-container">
+                    
+                    <input className="" type='text' name='apellido' required placeholder="Apellido" onChange={handleChange} value={apellido} />
                 </div>
-                <div className= "">
-                    <div className="">Artist Name</div>
-                    <input className="" type='text' name='artistname' required onChange={handleChange} value={artistname} />
+                <div className= "input-container">
+                    
+                    <input className="" type='text' name='artistname' required placeholder="Artist Name" onChange={handleChange} value={artistname} />
                 </div>
-                <div className= "">
-                    <div className="">E-mail</div>
-                    <input className="" type='text' name='correo' required onChange={handleChange} value={correo} />
+                <div className= "input-container">
+                    
+                    <input className="" type='text' name='correo' required placeholder="E-mail" onChange={handleChange} value={correo} />
+                    {renderErrorMessage("correo")}
                 </div>
-                <div className= "">
-                    <div className="">Password</div>
-                    <input className="" type='password' name='contraseña' required onChange={handleChange} value={contraseña} />
+                <div className= "input-container">
+                    
+                    <input className="" type='password' name='contraseña' required placeholder="Password" onChange={handleChange} value={contraseña} />
                 </div>
-                <div className= "" >
-                    <div className="" >Photo</div>
-                    <input className="" type='file' name='foto' required onChange={handleFile} />
+                <div className= "input-container" >
+                    
+                    <input className="" type='file' name='foto' placeholder="Photo" required onChange={handleFile} />
                     <div>{!!foto ? <img src={fotopre} width='270' alt='preview' /> : ''}</div>
                 </div>
-                <input
-                    className=""
+                <button className=""
                     type="submit"
-                    value="Register User" />
+                    value="Register User">
+                      REGISTER
+                     </button>
             </form>
     </div>
   )
