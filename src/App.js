@@ -15,6 +15,7 @@ import Library from "./library/Library";
 import AboutMe from "./home/aboutMe/AboutMe";
 import AboutMeContent from "./AboutMeContent/AboutMeContent";
 import SearchView from "./search/SearchView";
+import CreateSong from "./createSong/CreateSong";
 
 
 
@@ -44,6 +45,7 @@ function App() {
           <Route path="/library" element={<Library />} />
           <Route path="/favorites" element={<LikedSongs />} />
           <Route path="/upload-song" />
+          <Route path="/createSong" element={<CreateSong/>}/>
           <Route path="/AboutMe" element={<AboutMeContent />} />
           <Route path="/Contact" element={<Contact />} />
           <Route path="/About" element={<About />} />

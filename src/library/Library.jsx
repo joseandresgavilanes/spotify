@@ -16,6 +16,7 @@ const Library = () => {
               </div>
             </div>
           </NavLink>
+          <NavLink to="/createSong">
           <div className="library_container_info_add">
             <div className="card">
               <div className="img-holder">
@@ -28,6 +29,7 @@ const Library = () => {
               <div className="play-icon"></div>
             </div>
           </div>
+          </NavLink>
         </div>
       </div>
     </div>
