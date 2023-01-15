@@ -51,9 +51,9 @@ const Register = () => {
           /*   setRepetido(false);
               break;}
             else { */
-          setCorreo(value);
-          break;
         }
+        setCorreo(value);
+        break;
       case "contraseña":
         setContraseña(value);
         break;
