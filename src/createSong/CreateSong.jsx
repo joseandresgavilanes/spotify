@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import './CreateSong.scss'
 
 const CreateSong = () => {
 
@@ -11,6 +12,8 @@ const CreateSong = () => {
     const [songAuthor, setSongAuthor] = useState('');
     const [songId, setSongId] = useState('');
 
+    const currentYear = new Date();
+    const storedUser = JSON.parse(localStorage.getItem('user'));
     function validateForm(data) {
         if (!data.songTitle || !data.songYear || !data.songCover || !data.songTrack || !data.songAuthor || !data.songId) {
           return false;
@@ -28,13 +31,13 @@ const CreateSong = () => {
       }
       try {
         const data = new FormData();
-        data.append('songTitle', songTitle);
-        data.append('songLyrics',songLyrics);
-        data.append('songYear',songYear);
-        data.append('songCover',songCover);
-        data.append('songTrack',songTrack);
-        data.append('songAuthor',songAuthor);
-        data.append('songId',songId);
+        data.append('id', songTitle);
+        data.append('letra',songLyrics);
+        data.append('anio',currentYear);
+        data.append('carilla',songCover);
+        data.append('musica',songTrack);
+        data.append('nombre',storedUser.nombre);
+        data.append('idDueño',storedUser.id);
         await axios.post('[URL de tu API]', data);
         //Reset form
         setSongTitle('');
@@ -50,77 +53,60 @@ const CreateSong = () => {
     };
   
     return (
-      <form onSubmit={handleSubmit}>
-        <label>
-          Título de la canción:
-          <input
-            type="text"
-            value={songTitle}
-            onChange={(e) => setSongTitle(e.target.value)}
-            required
-          />
-        </label>
-        <br />
-        <label>
-          Letra de la canción:
-          <textarea
-            value={songLyrics}
-            onChange={(e) => setSongLyrics(e.target.value)}
-          />
-        </label>
-        <br />
-        <label>
-          Año:
-          <input
-            type="number"
-            value={songYear}
-            onChange={(e) => setSongYear(e.target.value)}
-            required
-          />
-        </label>
-        <br />
-        <label>
-          Carátula:
-          <input
-            type="file"
-            onChange={(e) => setSongCover(e.target.files[0])}
-            accept="image/*"
-            required
-          />
-        </label>
-        <br />
-        <label>
-          Pista de sonido:
-          <input
-            type="file"
-            onChange={(e) => setSongTrack(e.target.files[0])}
-            accept="audio/*"
-            required
-          />
-                </label>
-      <br />
-      <label>
-        Autor:
-        <input
-          type="text"
-          value={songAuthor}
-          onChange={(e) => setSongAuthor(e.target.value)}
-          required
-        />
-      </label>
-      <br />
-      <label>
-        ID:
-        <input
-          type="text"
-          value={songId}
-          onChange={(e) => setSongId(e.target.value)}
-          required
-        />
-      </label>
-      <br />
-      <input type="submit" value="Enviar" />
-    </form>
+        <div className="song-form-container">
+        <form onSubmit={handleSubmit}>
+          <div className="form-group">
+            <label>
+              <p className='titulo_creacion_cancion'>Título de la canción:</p>
+              <input
+                type="text"
+                value={songTitle}
+                onChange={(e) => setSongTitle(e.target.value)}
+                required
+                className="form-control_titulo"
+              />
+            </label>
+          </div>
+
+          <div className="form-group">
+            <label>
+              Carátula:
+              <input
+                type="file"
+                onChange={(e) => setSongCover(e.target.files[0])}
+                accept="image/*"
+                required
+                className="form-control-file"
+              />
+            </label>
+          </div>
+          <div className="form-group">
+            <label>
+              Pista de sonido:
+              <input
+                type="file"
+                onChange={(e) => setSongTrack(e.target.files[0])}
+                accept="audio/*"
+                required
+                className="form-control-file"
+              />
+            </label>
+          </div>
+          <div className="form-group">
+            <label>
+              Letra de la canción:
+              <textarea
+                value={songLyrics}
+                onChange={(e) => setSongLyrics(e.target.value)}
+                className="form-control"
+              />
+            </label>
+          </div>
+          <div className="form-group">
+            <input type="submit" value="Enviar" className="btn btn-primary" />
+          </div>
+        </form>
+      </div>
   );
 
 }

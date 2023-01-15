@@ -1,0 +1,59 @@
+.song-form-container {
+    background-color: #282828;
+    margin-top: 3%;
+    padding: 2%;
+    border-radius: 0.5rem;
+    box-shadow: 0px 0px 10px white;
+    margin-left: 25%;
+    width: 30%;
+    height: 80%;
+    .form-group {
+      margin-bottom: 1rem;
+  
+      label {
+        color: white;
+      }
+  
+      input,
+      textarea {
+        background-color: #383838;
+        color: white;
+        border-radius: 0.5rem;
+        border: none;
+        padding: 2% ;
+  
+        &:focus {
+          outline: none;
+          box-shadow: 0px 0px 10px #1DB954;
+        }
+      }
+  
+      .form-control-file {
+        background-color: #383838;
+        color: white;
+        border-radius: 0.5rem;
+        border: none;
+        padding: 0.5rem;
+        display: block;
+      }
+      .form-control_titulo{
+        width: 90%;
+        margin-left: 5%;
+      }
+      .titulo_creacion_cancion{
+        margin-left: 28%;
+      }
+    }
+  
+    .btn {
+      background-color: #1DB954;
+      color: white;
+      border-radius: 0.5rem;
+      border: none;
+      padding: 0.5rem 1rem;
+      font-weight: bold;
+      &:hover {
+        background-color: #1ed760;
+      }
+    }
+  }
