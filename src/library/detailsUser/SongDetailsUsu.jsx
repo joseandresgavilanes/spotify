@@ -5,21 +5,37 @@ import Loader from '../../loader/Loader';
 import './SongDetailsUsu.scss'
 
 const SongDetailsUsu = () => {
+  const [musicdb, setMusicdb] = useState(null);
+  const [loading, setLoading] = useState(false);
     const { cancion } = useParams();
 
+    useEffect(() => {
+      setLoading(true);
+    axios
+    .get(`https://loggin-api-production.up.railway.app/${cancion}`)
+    .then((response) => {
+      console.log("Llamaste al api")
+      console.log(cancion)
+      setMusicdb(response.data);
+      setLoading(false);
+    });
+  }, []);
+  if(loading){
+    return <Loader/>
+  }
     return (
         <div className="song_details">
         <div className="song_details_container">
           <div className="song_details_main">
             <div className="song_details_main_img">
-              <img src={cancion.carilla} alt="" />
+              <img src={musicdb[0].carilla} alt="" />
             </div>
             <div className="song_details_main_details">
               <p>SONG</p>
-              <h2>{cancion.titulo} </h2>
+              <h2>{musicdb[0].titulo} </h2>
               <div className="song_details_main_details_extras">
-                <img src={cancion.carilla} alt="" />
-                <p>{cancion.nombre}</p>
+                <img src={musicdb[0].carilla} alt="" />
+                <p>{musicdb[0].nombre}</p>
                 <i class="fa-solid fa-circle"></i>
                 <p>2020</p>
                 <i class="fa-solid fa-circle"></i>
@@ -58,14 +74,14 @@ const SongDetailsUsu = () => {
             <div className="song_details_lyrics_main">
               <h2>Lyrics</h2>
               <div className="song_details_lyrics_main_text">
-                {cancion.letra}
+                {musicdb[0].letra}
               </div>
             </div>
             <div className="song_details_artist">
-              <img src={cancion.carilla} alt="" />
+              <img src={musicdb[0].carilla} alt="" />
               <div className="song_details_artist_main">
                 <p>ARTIST</p>
-                <h2>{cancion.nombre}</h2>
+                <h2>{musicdb[0].nombre}</h2>
               </div>
             </div>
           </div>
