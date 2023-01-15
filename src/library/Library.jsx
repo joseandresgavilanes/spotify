@@ -1,6 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import "./Library.scss";
+import SongsUser from "./songsUser/SongsUser";
 
 const Library = () => {
   return (
@@ -16,6 +17,7 @@ const Library = () => {
               </div>
             </div>
           </NavLink>
+          <NavLink to="/createSong">
           <div className="library_container_info_add">
             <div className="card">
               <div className="img-holder">
@@ -28,6 +30,22 @@ const Library = () => {
               <div className="play-icon"></div>
             </div>
           </div>
+          </NavLink>
+          <NavLink to="/editsong">
+          <div className="library_container_info_add">
+            <div className="card">
+              <div className="img-holder">
+                <img src="./images/editar.png" alt="" />
+              </div>
+              <div className="text">
+                <h2>Edit Song</h2>
+                <p>problems?</p>
+              </div>
+              <div className="play-icon"></div>
+            </div>
+          </div>
+          </NavLink>
+          <SongsUser/>
         </div>
       </div>
     </div>

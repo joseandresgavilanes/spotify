@@ -15,6 +15,9 @@ import Library from "./library/Library";
 import AboutMe from "./home/aboutMe/AboutMe";
 import AboutMeContent from "./AboutMeContent/AboutMeContent";
 import SearchView from "./search/SearchView";
+import CreateSong from "./createSong/CreateSong";
+import SongDetailsUsu from "./library/detailsUser/SongDetailsUsu";
+import EditSong from "./editSong/EditSong";
 
 function App() {
   const [isHidden, setIsHidden] = useState(false);
@@ -42,11 +45,14 @@ function App() {
           <Route path="/library" element={<Library />} />
           <Route path="/favorites" element={<LikedSongs />} />
           <Route path="/upload-song" />
+          <Route path="/createSong" element={<CreateSong/>}/>
+          <Route path="editsong" element={<EditSong/>}/>
           <Route path="/AboutMe" element={<AboutMeContent />} />
           <Route path="/Contact" element={<Contact />} />
           <Route path="/About" element={<About />} />
           <Route path="/about-me" element={<AboutMe />} />
           <Route path="/songs/:songid" element={<SongDetails />} />
+          <Route path="/songsDetails:objetos" element={<SongDetailsUsu/>}/>
         </Routes>
       </div>
       <div className={`Footer_Container ${isHidden ? "hidden" : ""}`}>
