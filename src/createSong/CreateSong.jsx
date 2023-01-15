@@ -53,6 +53,7 @@ const CreateSong = () => {
     };
   
     return (
+        <div className='create_song_page'>
         <div className="song-form-container">
         <form onSubmit={handleSubmit}>
           <div className="form-group">
@@ -92,20 +93,21 @@ const CreateSong = () => {
               />
             </label>
           </div>
-          <div className="form-group">
+          <div className="form-group_letras">
             <label>
               Letra de la canción:
               <textarea
                 value={songLyrics}
                 onChange={(e) => setSongLyrics(e.target.value)}
-                className="form-control"
+                className="form-control_letra"
               />
             </label>
           </div>
-          <div className="form-group">
+          <div className="form-group_boton">
             <input type="submit" value="Enviar" className="btn btn-primary" />
           </div>
         </form>
+      </div>
       </div>
   );
 
