@@ -52,7 +52,7 @@ function App() {
           <Route path="/About" element={<About />} />
           <Route path="/about-me" element={<AboutMe />} />
           <Route path="/songs/:songid" element={<SongDetails />} />
-          <Route path="/songsDetails" element={<SongDetailsUsu/>}/>
+          <Route path="/songsDetails:objetos" element={<SongDetailsUsu/>}/>
         </Routes>
       </div>
       <div className={`Footer_Container ${isHidden ? 'hidden' : ''}`}>
