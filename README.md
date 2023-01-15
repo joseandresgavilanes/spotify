@@ -67,15 +67,17 @@
 
 # 🎶 About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+[![KRUGER MUSIC]](https://example.com)
 
-Lorem loremloremlorem lorem loremloremlorem lorem lorem lorem loremloremlorem lorem loremloremlorem lorem lorem loremloremloremlorem lorem loremloremlorem lorem lorem lorem loremloremlorem lorem loremloremlorem lorem lorem lorem loremloremlorem lorem loremloremlorem lorem lorem lorem loremloremlorem lorem loremloremlorem lorem lorem lorem
+Esta es una aplicacion pensada para acompañarte en tu dia a dia.
+Aqui puedes a primera vista mirar las canciones TOP a nivel Mundial y tus propias canciones
 
 ### What can you do?
 
-- See the top charts around the globe 🌎⚡.
-- Find your favorite chart 🏆✔.
-- Create your own chart 😱🚀.
+- Puedes buscar cualquier musica o canción, sea por artista, genero, pais. 🎵🌎🎺🎤 🇪🇨
+- Crear tu usuario y contraseña con las caracteristicas para un artista.
+  - A demas de tener tus canciones preferidas en la lista de reproduccion, tambien podras poner tus propias canciones para crear tu propio Album.
+    🤵🎵🎧💃🕺🎶
 
 # 🔨 Built with
 
@@ -92,9 +94,9 @@ Lorem loremloremlorem lorem loremloremlorem lorem lorem lorem loremloremlorem lo
 
 # 🤸 Getting Started
 
-It's necessary to have git and node in your computer and an account in RAPID API!
+It's necessary to have git 😺 and node in your computer and an account in RAPID API!
 
-### 💾 Installation
+### 💾 🗄️ Installation
 
 ```bash
 # Clone Repository
@@ -117,11 +119,18 @@ $ add your shazamCore KEY
 
 # ⏩ Usage
 
-- Crear una cuenta:
+- Crear una cuenta: ✍🏼
   [![Product usage Screen Shot][usage2-screenshot]]
 
-- Crear Equipos Fantasia:
-  [![Product usage Screen Shot][usage-screenshot]]
+- Ingresa con tu cuenta de usuario 🗝️
+
+- Disfruta de tu música preferida 🎵 ᴺᴼᵂ ᴾᴸᴬᵞᴵᴺᴳ♫♬♪
+
+- En tu Cuenta edita tu informacion 📝
+
+- Crea tu lista de reproduccion 📋 ▶️ 🎵
+
+- Crea tu Propio album Musical 📀
 
 <!-- ROADMAP -->
 <br/>
@@ -137,13 +146,24 @@ $ add your shazamCore KEY
 
 # 🗺 Roadmap
 
-- [x] lOREM
-- [x] lOREM
-- [x] lOREM
-- [ ] lOREM
-- [ ] lOREM lOREM lOREM:
-  - [ ] lOREM
-  - [ ] lOREM
+- [x] Seleccionar Tema de nuestra aplicación
+- [x] Buscar Api que se adapten a nuestras ideas
+- [x] Revisar que informacion nos da el Api
+- [x] Realizar lluvia de ideas para la funcionalidad y onjetivos de ejecución.
+- [x] FUNCIONALIDAD FRONTEND:
+  - [x] Decidir Modelo Visual a implementar
+  - [x] Metodologia de trabajo sobre Github
+  - [x] Estructura de Carpetas dentro de la Aplicacion
+  - [x] Estandarizacion de nombramiento
+        componentes y clases dentro del html
+  - [x] Generación de componentes con el Api Sazham Core
+    - [x] Mostrar Canciones Global
+    - [x] Componente de Busqueda
+    - [x] Playlist personalizada
+- [x] FUNCIONALIDAD BACKEND:
+  - [x] Seleccionar base de datos
+  - [x] Implementación Api con Springboot
+  - [x] Deploy y publicación del Api personalizada para CRUD
 
 <!-- CONTRIBUTING -->
 <br/>
@@ -203,7 +223,6 @@ Video Demostration Link: [Kruger Music](https://google.com)
 
 <!-- ACKNOWLEDGMENTS -->
 
-<br/>
 <br/>
 
 # ℹ️ Acknowledgments
