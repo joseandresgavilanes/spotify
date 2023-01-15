@@ -24,7 +24,6 @@
             .aboutMe_editar_foto{
                 width: 30px;
                 height: 30px;
-                background-color: white;
                 border: none;
                 margin-top: -5%;
                 margin-left: 15%;
@@ -69,11 +68,11 @@
                 }
             }
             .Contenedor_botones_about{
-                width: 100%;
+                width: 50%;
                 margin-left: 50%;
                 .AboutMe_botones_de_pie{
                     display: flex;
-                    width: 100%;
+                    width: 50%;
                     margin-left: 15%;
                     .edit-button {
                         background-color: green;
