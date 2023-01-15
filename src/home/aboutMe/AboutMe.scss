@@ -2,7 +2,7 @@
     position: absolute;
     top: 20px;
     right: 50px;
-    background-color: rgba(0, 0, 0, 0.701);
+    background-color: rgba(0, 0, 0, 0.622);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -26,10 +26,12 @@
     p {
         font-size: 13px;
         font-weight: 700;
+       
     }
     .rounded-circle{
-        width: 40px;
-        height: 40px;
+        background-color: #454545;
+        width: 30px;
+        height: 30px;
         border-radius: 2rem;
     }
 }
