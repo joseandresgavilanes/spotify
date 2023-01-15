@@ -13,7 +13,7 @@ const Header = () => {
           />
         </NavLink>
         <div className="header_links">
-          <NavLink className="header_links_item" to="/">
+          <NavLink className="header_links_item" to="/home">
             <svg
               role="img"
               height="24"
@@ -61,7 +61,7 @@ const Header = () => {
         </div>
 
         <div className="header_extras">
-          <NavLink className="header_links_item" to="/">
+          <NavLink className="header_links_item" to="/home">
             <div className="header_links_item_img">
               <svg
                 role="img"
@@ -111,7 +111,7 @@ const Header = () => {
 
         <div className="header_playlist">
           <div className="header_line"></div>
-          <NavLink className="header_links_item" to="/">
+          <NavLink className="header_links_item" to="/home">
             <p className="header_links_item_text">My Playlist #1</p>
           </NavLink>
         </div>
