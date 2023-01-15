@@ -126,7 +126,6 @@ $ add your shazamCore KEY
 
 <!-- ROADMAP -->
 <br/>
-<br/>
 
 # 💻 Live Demo
 
@@ -152,7 +151,6 @@ $ add your shazamCore KEY
 <!-- CONTRIBUTING -->
 <br/>
 <br/>
-<br/>
 
 # 🙌 Contributing
 
@@ -166,14 +164,14 @@ Contributions are what make the open source community such an amazing place to b
 
 <br/>
 <br/>
-<br/>
+
 <!-- LICENSE -->
 
 # 📜 License
 
 Fantasy Team esa distribuida bajo los terminos de Apache License Version 2.0. La version completa de la licencia esta disponible en el archivo [LICENSE](LICENSE) de este repositorio. Cualquier contribucion a este proyecto sera licenciada bajo la licencia Apache License Version 2.0.
 
-<br/>
+
 <br/>
 <br/>
 <!-- CONTACT -->
