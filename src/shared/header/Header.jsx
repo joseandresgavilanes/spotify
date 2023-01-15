@@ -5,7 +5,7 @@ const Header = () => {
   return (
     <header className="header">
       <div className="header_container">
-        <NavLink className="header_logo" to="/">
+        <NavLink className="header_logo" to="/home">
           <img
             className="header_logo-img"
             src="https://storage.googleapis.com/pr-newsroom-wp/1/2018/11/Spotify_Logo_RGB_White.png"
@@ -115,7 +115,7 @@ const Header = () => {
             <p className="header_links_item_text">My Playlist #1</p>
           </NavLink>
         </div>
-      </div>
+   </div>
     </header>
   );
 };
