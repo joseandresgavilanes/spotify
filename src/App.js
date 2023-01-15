@@ -16,6 +16,7 @@ import AboutMe from "./home/aboutMe/AboutMe";
 import AboutMeContent from "./AboutMeContent/AboutMeContent";
 import SearchView from "./search/SearchView";
 
+
 function App() {
   const [isHidden, setIsHidden] = useState(false);
   useEffect(() => {
