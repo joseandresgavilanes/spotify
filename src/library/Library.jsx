@@ -1,6 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import "./Library.scss";
+import SongsUser from "./songsUser/SongsUser";
 
 const Library = () => {
   return (
@@ -30,6 +31,7 @@ const Library = () => {
             </div>
           </div>
           </NavLink>
+          <SongsUser/>
         </div>
       </div>
     </div>

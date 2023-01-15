@@ -16,6 +16,7 @@ import AboutMe from "./home/aboutMe/AboutMe";
 import AboutMeContent from "./AboutMeContent/AboutMeContent";
 import SearchView from "./search/SearchView";
 import CreateSong from "./createSong/CreateSong";
+import SongDetailsUsu from "./library/detailsUser/SongDetailsUsu";
 
 
 
@@ -51,6 +52,7 @@ function App() {
           <Route path="/About" element={<About />} />
           <Route path="/about-me" element={<AboutMe />} />
           <Route path="/songs/:songid" element={<SongDetails />} />
+          <Route path="/songsDetails" element={<SongDetailsUsu/>}/>
         </Routes>
       </div>
       <div className={`Footer_Container ${isHidden ? 'hidden' : ''}`}>

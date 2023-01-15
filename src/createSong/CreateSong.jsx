@@ -1,9 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './CreateSong.scss'
-
 const CreateSong = () => {
-
+  const datosdb="";
     const [songTitle, setSongTitle] = useState('');
     const [songLyrics, setSongLyrics] = useState('');
     const [songYear, setSongYear] = useState('');
@@ -11,11 +10,35 @@ const CreateSong = () => {
     const [songTrack, setSongTrack] = useState(null);
     const [songAuthor, setSongAuthor] = useState('');
     const [songId, setSongId] = useState('');
+    const [coverBase64, setCoverBase64] = useState(null);
+    const [trackBase64, setTrackBase64] = useState(null);
+    const [datamusicdb, setDatamusicdb]=useState(null);
 
     const currentYear = new Date();
     const storedUser = JSON.parse(localStorage.getItem('user'));
+
+    useEffect(() => {
+      if (songCover) {
+          const reader = new FileReader();
+          reader.readAsDataURL(songCover);
+          reader.onloadend = () => {
+              setCoverBase64(reader.result);
+          }
+      }
+  }, [songCover]);
+
+  useEffect(() => {
+      if (songTrack) {
+          const reader = new FileReader();
+          reader.readAsDataURL(songTrack);
+          reader.onloadend = () => {
+              setTrackBase64(reader.result);
+          }
+      }
+  }, [songTrack]);
+
     function validateForm(data) {
-        if (!data.songTitle || !data.songYear || !data.songCover || !data.songTrack || !data.songAuthor || !data.songId) {
+        if (!data.songTitle || !data.songCover || !data.songTrack) {
           return false;
         }
         return true;
@@ -24,21 +47,31 @@ const CreateSong = () => {
   
     const handleSubmit = async (event) => {
       event.preventDefault();
-      const formData = {songTitle,songLyrics,songYear,songCover,songTrack,songAuthor,songId};
+      const formData = {songTitle,songLyrics,songYear,songCover,songTrack};
       if(!validateForm(formData)){
         console.log("Por favor completa todos los campos obligatorios");
         return;
       }
       try {
-        const data = new FormData();
-        data.append('id', songTitle);
-        data.append('letra',songLyrics);
-        data.append('anio',currentYear);
-        data.append('carilla',songCover);
-        data.append('musica',songTrack);
-        data.append('nombre',storedUser.nombre);
-        data.append('idDueño',storedUser.id);
-        await axios.post('[URL de tu API]', data);
+        const data={
+          titulo: songTitle,
+          letra: songLyrics,
+          anio:currentYear.getFullYear,
+          carilla: coverBase64,
+          musica:trackBase64,
+          nombre: storedUser.nombre,
+          idDueño: storedUser.id
+        }
+        const response = axios({
+          url: `https://loggin-api-production.up.railway.app/usuarios/musicadb/postear`,
+          method: "POST",
+          data: data,
+        });
+        const nombreCancion=data.titulo;
+        const respuesta = await axios.put(`https://loggin-api-production.up.railway.app/usuarios/musicaUsuario/${storedUser.id}/${nombreCancion}`);
+                if (respuesta.status === 200) {
+                    console.log("Canción agregada");
+                }
         //Reset form
         setSongTitle('');
         setSongLyrics('');
