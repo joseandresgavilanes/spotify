@@ -1,15 +1,15 @@
 import React, { useState } from "react";
-import "./Search.scss";
-import { useGetSongsBySearchQuery } from "../redux/services/shazamCore";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import Song from "../home/songs/song/Song";
 import Loader from "../loader/Loader";
+import { useGetSongsBySearchQuery } from "../redux/services/shazamCore";
 
-const Search = () => {
+const SearchView = () => {
+  const { searchTerm } = useParams();
   const navigate = useNavigate();
 
-  const { data, isFetching, error } = useGetSongsBySearchQuery("eminem");
-  const [searchTerm, setSearchTerm] = useState("");
+  const { data, isFetching, error } = useGetSongsBySearchQuery(searchTerm);
+  const [search, setSearch] = useState("");
 
   if (isFetching) return <Loader />;
   if (error) return "Error";
@@ -18,9 +18,8 @@ const Search = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    navigate(`/search/${searchTerm}`);
+    navigate(`/search/${search}`);
   };
-
   return (
     <div className="search">
       <div className="search_container">
@@ -35,8 +34,8 @@ const Search = () => {
               placeholder="What do you want to listen to?"
               type="search"
               class="input"
-              value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}
+              value={search}
+              onChange={(e) => setSearch(e.target.value)}
             />
           </div>
         </form>
@@ -52,4 +51,4 @@ const Search = () => {
   );
 };
 
-export default Search;
+export default SearchView;
