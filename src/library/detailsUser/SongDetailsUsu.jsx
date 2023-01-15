@@ -12,7 +12,7 @@ const SongDetailsUsu = () => {
     useEffect(() => {
       setLoading(true);
     axios
-    .get(`https://loggin-api-production.up.railway.app/${cancion}`)
+    .get(`https://loggin-api-production.up.railway.app/usuarios/musica/${cancion}`)
     .then((response) => {
       console.log("Llamaste al api")
       console.log(cancion)

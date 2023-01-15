@@ -40,14 +40,26 @@ const EditSong = () => {
 
   const handleEdit = (e) => {
     e.preventDefault();
+    const datos={
+        id:cancion[0].id,
+        titulo:cancion[0].titulo,
+        letra:cancion[0].letra,
+        anio:cancion[0].anio,
+        carilla:cancion[0].carilla,
+        musica:cancion[0].musica,
+        nombre:cancion[0].nombre,
+        idDueño:cancion[0].idDueño
+    }
     console.log(cancion)
     let formData = new FormData();
     formData.append('id',cancion[0].id)
 
     if(title){
+        datos.titulo=title;
         formData.append('titulo', title);
     }
     if(lyrics){
+        datos.letra=lyrics
         formData.append('letra', lyrics);
     }
 
@@ -56,6 +68,7 @@ const EditSong = () => {
         imageReader.readAsDataURL(image);
         imageReader.onloadend = ()=> {
           formData.append('carilla', imageReader.result);
+          datos.carilla=imageReader.result;
         }
     }
     if(audio){
@@ -63,13 +76,12 @@ const EditSong = () => {
         audioReader.readAsDataURL(audio);
         audioReader.onloadend = ()=> {
           formData.append('musica', audioReader.result);
+          datos.musica=audioReader.result
         }
     }
     console.log(formData)
 
-
-
-    axios.put(`https://loggin-api-production.up.railway.app/`, formData)
+    axios.put(`https://loggin-api-production.up.railway.app/usuarios/musicaUpdate`, datos)
       .then(response => {
         console.log(response);
         alert("Canción editada exitosamente");
