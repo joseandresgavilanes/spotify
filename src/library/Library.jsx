@@ -45,6 +45,20 @@ const Library = () => {
             </div>
           </div>
           </NavLink>
+          <NavLink to="/deletesong">
+          <div className="library_container_info_add">
+            <div className="card">
+              <div className="img-holder">
+                <img src="./images/delete.png" alt="" />
+              </div>
+              <div className="text">
+                <h2>Delete Song</h2>
+                <p>Delete your song</p>
+              </div>
+              <div className="play-icon"></div>
+            </div>
+          </div>
+          </NavLink>
           <SongsUser/>
         </div>
       </div>
