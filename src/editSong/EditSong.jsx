@@ -1,108 +1,144 @@
-import React,{useState} from 'react'
-import axios from 'axios';
+import React, { useState } from "react";
+import axios from "axios";
+import "./EditSong.scss";
 
 const EditSong = () => {
-    const [id, setId] = useState('');
-  const [title, setTitle] = useState('');
-  const [lyrics, setLyrics] = useState('');
+  const [id, setId] = useState("");
+  const [title, setTitle] = useState("");
+  const [lyrics, setLyrics] = useState("");
   const [image, setImage] = useState(null);
   const [audio, setAudio] = useState(null);
   const [isDisabled, setIsDisabled] = useState(true);
-  const [cancion,setCancion]=useState(null);
+  const [cancion, setCancion] = useState(null);
 
   const handleChange = (e) => {
     setId(e.target.value);
-  }
+  };
 
   const handleImageChange = (e) => {
     setImage(e.target.files[0]);
-  }
+  };
 
   const handleAudioChange = (e) => {
     setAudio(e.target.files[0]);
-  }
+  };
 
   const handleSubmit = (e) => {
-    console.log("presionaste")
+    console.log("presionaste");
     e.preventDefault();
-    axios.get(`https://loggin-api-production.up.railway.app/titulo/${id}`)
+    axios
+      .get(`https://loggin-api-production.up.railway.app/titulo/${id}`)
 
-      .then(response => {
-        console.log("llamaste a la api")
+      .then((response) => {
+        console.log("llamaste a la api");
         setTitle(response.data.titulo);
         setLyrics(response.data.letra);
-        setCancion(response.data)
-        console.log(response.data)
+        setCancion(response.data);
+        console.log(response.data);
         setIsDisabled(false);
       });
-      console.log("terminaste con la api")
-  }
+    console.log("terminaste con la api");
+  };
 
   const handleEdit = (e) => {
     e.preventDefault();
-    console.log(cancion)
+    console.log(cancion);
     let formData = new FormData();
-    formData.append('id',cancion[0].id)
+    formData.append("id", cancion[0].id);
 
-    if(title){
-        formData.append('titulo', title);
+    if (title) {
+      formData.append("titulo", title);
     }
-    if(lyrics){
-        formData.append('letra', lyrics);
+    if (lyrics) {
+      formData.append("letra", lyrics);
     }
 
-    if(image){
-        let imageReader = new FileReader();
-        imageReader.readAsDataURL(image);
-        imageReader.onloadend = ()=> {
-          formData.append('carilla', imageReader.result);
-        }
+    if (image) {
+      let imageReader = new FileReader();
+      imageReader.readAsDataURL(image);
+      imageReader.onloadend = () => {
+        formData.append("carilla", imageReader.result);
+      };
     }
-    if(audio){
-        let audioReader = new FileReader();
-        audioReader.readAsDataURL(audio);
-        audioReader.onloadend = ()=> {
-          formData.append('musica', audioReader.result);
-        }
+    if (audio) {
+      let audioReader = new FileReader();
+      audioReader.readAsDataURL(audio);
+      audioReader.onloadend = () => {
+        formData.append("musica", audioReader.result);
+      };
     }
-    console.log(formData)
+    console.log(formData);
 
-
-
-    axios.put(`https://loggin-api-production.up.railway.app/`, formData)
-      .then(response => {
+    axios
+      .put(`https://loggin-api-production.up.railway.app/`, formData)
+      .then((response) => {
         console.log(response);
         alert("Canción editada exitosamente");
       });
-  }
+  };
 
   return (
-    <form>
-      <label>Buscar por ID:</label>
-      <input type="text" id="id" value={id} onChange={handleChange}/>
-      <button type="submit" onClick={handleSubmit}>Buscar</button>
-      <br/><br/>
+    <div className="editsong_container">
+      <form className="editSong">
+        <label className="editSong_label">Buscar por ID:</label>
+        <input
+          className="editSong_input"
+          type="text"
+          id="id"
+          value={id}
+          onChange={handleChange}
+        />
+        <button className="editSong_btn" type="submit" onClick={handleSubmit}>
+          Buscar
+        </button>
 
-      <label>Título:</label>
-      <input type="text" id="title" value={title} onChange={(e) => setTitle(e.target.value)} disabled={isDisabled}/>
-      <br/><br/>
+        <label className="editSong_label">Título:</label>
+        <input
+          className="editSong_input"
+          type="text"
+          id="title"
+          value={title}
+          onChange={(e) => setTitle(e.target.value)}
+          disabled={isDisabled}
+        />
 
-      <label>Letra:</label>
-      <textarea id="lyrics" value={lyrics} onChange={(e) => setLyrics(e.target.value)} disabled={isDisabled}></textarea>
-      <br/><br/>
+        <label className="editSong_label">Letra:</label>
+        <textarea
+          className="editSong_input"
+          id="lyrics"
+          value={lyrics}
+          onChange={(e) => setLyrics(e.target.value)}
+          disabled={isDisabled}
+        ></textarea>
 
-      <label>Carilla:</label>
-      <input type="file" id="image" onChange={handleImageChange} disabled={isDisabled}/>
-      <br/><br/>
+        <label className="editSong_label">Carilla:</label>
+        <input
+          className="editSong_input"
+          type="file"
+          id="image"
+          onChange={handleImageChange}
+          disabled={isDisabled}
+        />
 
-      <label>Música:</label>
-      <input type="file" id="audio"
-      onChange={handleAudioChange} disabled={isDisabled}/>
-      <br/><br/>
-      <button type="button" onClick={handleEdit} disabled={isDisabled}>Editar</button>
-</form>
-  )
+        <label className="editSong_label">Música:</label>
+        <input
+          className="editSong_input"
+          type="file"
+          id="audio"
+          onChange={handleAudioChange}
+          disabled={isDisabled}
+        />
+        <button
+          className="editSong_btn"
+          type="button"
+          onClick={handleEdit}
+          disabled={isDisabled}
+        >
+          Editar
+        </button>
+      </form>
+    </div>
+  );
+};
 
-}
-
-export default EditSong
+export default EditSong;
