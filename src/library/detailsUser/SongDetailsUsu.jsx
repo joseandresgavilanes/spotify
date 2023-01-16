@@ -1,27 +1,30 @@
 import React,{useEffect, useState} from 'react'
 import axios from 'axios';
-import { useParams } from "react-router-dom";
 import Loader from '../../loader/Loader';
 import './SongDetailsUsu.scss'
 
 const SongDetailsUsu = () => {
   const [musicdb, setMusicdb] = useState(null);
-  const [loading, setLoading] = useState(false);
-    const { cancion } = useParams();
+  const [loading, setLoading] = useState(true);
+  const storedSong = JSON.parse(localStorage.getItem("cancion"));
 
-    useEffect(() => {
-      setLoading(true);
-    axios
-    .get(`https://loggin-api-production.up.railway.app/usuarios/musica/${cancion}`)
-    .then((response) => {
+  useEffect(() => {
+    setLoading(true);
+    axios.get(`https://loggin-api-production.up.railway.app/titulo/${storedSong}`)
+    .then(response => {
       console.log("Llamaste al api")
-      console.log(cancion)
-      setMusicdb(response.data);
+      setMusicdb(response.data)
+      setLoading(false);
+      console.log(response.data)
+    })
+    .catch(error => {
+      console.log("algo anda mal")
       setLoading(false);
     });
-  }, []);
-  if(loading){
-    return <Loader/>
+  }, [storedSong])
+  
+  if (loading) {
+    return <Loader />
   }
     return (
         <div className="song_details">
