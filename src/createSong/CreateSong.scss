@@ -2,13 +2,17 @@
     overflow-y: scroll;
     width: 100%;
     align-items: center;
-
+    @media (max-width: 600px) {
+      font-size: 14px;
+    }
     .song-form-container {
-        background-color: #282828;
-        margin-top: 3%;
+      background-color: rgb(26, 26, 26);
+
+        display: flex;
+        flex-direction: column;
+        margin-top: 8%;
         padding: 2%;
         border-radius: 0.5rem;
-        box-shadow: 0px 0px 10px white;
         margin-left: 25%;
         width: 50%;
         .form-group_letras{
@@ -35,9 +39,12 @@
         }
         .form-group {
           margin-bottom: 1rem;
+          margin-bottom: 30px;
+
       
           label {
             color: white;
+            
           }
       
           input,
@@ -48,17 +55,21 @@
             color: white;
             border-radius: 0.5rem;
             border: none;
-            margin-left: 7%;
-            padding: 0.5rem;
+            width: 100%;
+            padding: 15px 10px;
+            
           }
           .form-control_titulo{
             width: 90%;
             margin-left: 5%;
             outline: none;
             text-align: center;
+            
+
           }
           .titulo_creacion_cancion{
-            margin-left: 35%;
+            margin-bottom: 20px;
+            text-align: center;
           }
     
         }
@@ -66,15 +77,21 @@
     
       
         .btn {
+          width: 100%;
+          margin: 0 auto;
             outline: none;
           background-color: #1DB954;
           color: white;
           border-radius: 0.5rem;
           border: none;
-          padding: 0.5rem 1rem;
+          padding: 1rem 3rem;
           font-weight: bold;
           &:hover {
             background-color: #1ed760;
+          }
+
+          @media (max-width: 600px) {
+            margin-top: 20px;
           }
         }
       }
