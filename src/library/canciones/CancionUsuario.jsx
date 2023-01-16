@@ -5,10 +5,17 @@ import '../../home/songs/song/Song.scss';
 const CancionUsuario = (props) => {
     console.log(props.user)
 
-
+    const handlePlayClick = () => {
+      const songUrl = props.user.cancion;
+      const audioPlayer = new Audio(songUrl);
+      audioPlayer.play();
+      audioPlayer.onended = () => {
+        URL.revokeObjectURL(songUrl);
+      }
+    }
+    
     return (
 <NavLink to={`/songsDetails/${props.user.titulo}`}>
-{localStorage.setItem('cancion',JSON.stringify(props.user.titulo))}
           <div className="card">
             <div className="img-holder">
               <img src={`${props.user.carilla}`} alt="" />
@@ -17,8 +24,8 @@ const CancionUsuario = (props) => {
               <h2>{props.user.titulo} </h2>
               <p>{props.user.nombre}</p>
             </div>
-            <NavLink to={`/`}>
-              <div className="play-icon">
+            <NavLink to={`/home`}>
+              <div className="play-icon"  onClick={handlePlayClick}>
                 <div className="circle">
                   <div className="triangle"></div>
                 </div>
