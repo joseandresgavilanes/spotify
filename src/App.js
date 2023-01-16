@@ -18,6 +18,7 @@ import SearchView from "./search/SearchView";
 import CreateSong from "./createSong/CreateSong";
 import SongDetailsUsu from "./library/detailsUser/SongDetailsUsu";
 import EditSong from "./editSong/EditSong";
+import DeleteSong from "./deleteSong/DeleteSong";
 
 function App() {
   const [isHidden, setIsHidden] = useState(false);
@@ -52,6 +53,7 @@ function App() {
           <Route path="/About" element={<About />} />
           <Route path="/about-me" element={<AboutMe />} />
           <Route path="/songs/:songid" element={<SongDetails />} />
+          <Route path="/deletesong" element={<DeleteSong/>}/>
           <Route path="/songsDetails:objetos" element={<SongDetailsUsu/>}/>
         </Routes>
       </div>

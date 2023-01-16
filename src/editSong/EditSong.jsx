@@ -42,36 +42,49 @@ const EditSong = () => {
 
   const handleEdit = (e) => {
     e.preventDefault();
-    console.log(cancion);
+    const datos={
+        id:cancion[0].id,
+        titulo:cancion[0].titulo,
+        letra:cancion[0].letra,
+        anio:cancion[0].anio,
+        carilla:cancion[0].carilla,
+        musica:cancion[0].musica,
+        nombre:cancion[0].nombre,
+        idDueño:cancion[0].idDueño
+    }
+    console.log(cancion)
     let formData = new FormData();
     formData.append("id", cancion[0].id);
 
-    if (title) {
-      formData.append("titulo", title);
+    if(title){
+        datos.titulo=title;
+        formData.append('titulo', title);
     }
-    if (lyrics) {
-      formData.append("letra", lyrics);
+    if(lyrics){
+        datos.letra=lyrics
+        formData.append('letra', lyrics);
     }
 
-    if (image) {
-      let imageReader = new FileReader();
-      imageReader.readAsDataURL(image);
-      imageReader.onloadend = () => {
-        formData.append("carilla", imageReader.result);
-      };
+    if(image){
+        let imageReader = new FileReader();
+        imageReader.readAsDataURL(image);
+        imageReader.onloadend = ()=> {
+          formData.append('carilla', imageReader.result);
+          datos.carilla=imageReader.result;
+        }
     }
-    if (audio) {
-      let audioReader = new FileReader();
-      audioReader.readAsDataURL(audio);
-      audioReader.onloadend = () => {
-        formData.append("musica", audioReader.result);
-      };
+    if(audio){
+        let audioReader = new FileReader();
+        audioReader.readAsDataURL(audio);
+        audioReader.onloadend = ()=> {
+          formData.append('musica', audioReader.result);
+          datos.musica=audioReader.result
+        }
     }
     console.log(formData);
 
-    axios
-      .put(`https://loggin-api-production.up.railway.app/`, formData)
-      .then((response) => {
+    axios.put(`https://loggin-api-production.up.railway.app/usuarios/musicaUpdate`, datos)
+      .then(response => {
         console.log(response);
         alert("Canción editada exitosamente");
       });
