@@ -96,6 +96,17 @@ Aqui puedes a primera vista mirar las canciones TOP a nivel Mundial y tus propia
 
 It's necessary to have git 😺 and node in your computer and an account in RAPID API!
 
+
+### 👨‍💻❗ Log in
+
+```bash
+# EMAIL
+$ pepe@gmail.com
+# PASSWORD
+$ pepe1233456
+```
+
+
 ### 💾 🗄️ Installation
 
 ```bash
