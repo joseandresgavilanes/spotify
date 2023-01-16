@@ -5,10 +5,10 @@ import '../../home/songs/song/Song.scss';
 const CancionUsuario = (props) => {
     console.log(props.user)
 
-    localStorage.setItem('cancion',JSON.stringify(props.user.titulo));
 
     return (
-<NavLink to={`/songsDetails`}>
+<NavLink to={`/songsDetails/${props.user.titulo}`}>
+{localStorage.setItem('cancion',JSON.stringify(props.user.titulo))}
           <div className="card">
             <div className="img-holder">
               <img src={`${props.user.carilla}`} alt="" />
