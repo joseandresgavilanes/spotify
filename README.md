@@ -1,7 +1,7 @@
 <br />
 <div align="center">
   <a href="https://github.com">
-    <img src="./public/images/krugermusic.png" alt="Logo" width="300" height="180">
+    <img src="./public/images/krugerlogo.png" alt="Logo" width="300" height="180">
   </a>
 
   <h1 align="center">Kruger Music (Spotify clone)</h1>
