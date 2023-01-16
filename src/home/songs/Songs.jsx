@@ -10,6 +10,7 @@ const Songs = () => {
 
   return (
     <div className="songs_main_container">
+      <h1 className="songs_title">Top Songs</h1>
       <ul className="songs_container">
         {data?.map((item) => (
           <Song item={item} key={item.key} />
