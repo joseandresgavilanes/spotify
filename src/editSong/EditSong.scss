@@ -1,0 +1,49 @@
+.editsong_container{
+    width: 100%;
+    display: flex;
+    overflow-y: scroll;
+    padding: 40px 35px;
+    justify-content: center;
+    height: 100%;
+}
+
+
+.editSong{
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    margin: auto;
+    background-color: rgb(26, 26, 26);
+    width: 40%;
+    min-width: 260px;
+    max-width: 450px;
+    gap: .3em;
+    padding: 3%;
+    border-radius: 10px;
+
+    &_input{
+        background-color: #383838;
+        color: white;
+        padding: 10px;
+        border-radius: 6px;
+        border: none;
+        &:focus {
+            outline: none;
+            outline: none;
+          }
+    }
+
+    &_label{
+        font-size: 14px;
+        margin-top: 10px;
+    }
+
+
+    &_btn{
+        padding: 10px;
+        border-radius: 6px;
+        background-color: var(--primary-color);
+        color: white;
+        border: none;
+    }
+}

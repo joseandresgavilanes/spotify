@@ -1,0 +1,331 @@
+.mi-formulario {
+    opacity: 0.4;
+    transition: opacity 1s;
+  }
+.formulario_contenedor{
+    font-family: 'FormularioFont', Arial, sans-serif;
+    background-color: #333;
+    width: 40%;
+    opacity: 0.4;
+    transition: opacity 1s;
+    border-radius: 1rem;
+    display: flexbox;
+    margin-left: 25%;
+   box-shadow: 0px 0px 10px 1px white;
+}
+.mi-formulario-entrando {
+    opacity: 1;
+  }
+
+.formulario_inputs{
+    border: none;
+    font-size: 100%;
+    border-radius: 0.5rem;
+    background-color: #282828;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    margin-bottom: 5%;
+}
+.formulario_errores{
+    margin-top: 0.3%;
+    color: red;
+    font-size: 80%;
+    width: 20%;
+    background: none;
+    position: absolute;
+}
+.formulario_errores_correo{
+    margin-top: 0.3%;
+    color: red;
+    font-size: 80%;
+    width: 20%;
+    margin-left: 2%;
+    background: none;
+    position: absolute;
+}
+.formulario_errores_apellido{
+    padding: 0%;
+    color: red;
+    margin-top: 0.3%;
+    background: none;
+    font-size: 80%;
+    position: absolute;
+}
+.formulario_errores_mensaje{
+    padding: 0%;
+    color: red;
+    margin-left: 2%;
+    margin-top: 0.3%;
+    background: none;
+    font-size: 80%;
+    position: absolute;
+}
+.formulario_nombres{
+    padding-top: 5%;
+    width: 100%;
+    display: flex;
+}
+.formulario_apellido{
+    padding: 10%;
+    width: 100%;
+    border: none;
+    height: 50%;
+    text-align: center;
+    border-radius: 0.5rem;
+    color: white;
+    background-color: #282828;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    margin-bottom: 5%;
+    outline: none;
+}
+.formulario_nombre{
+    padding: 10%;
+    padding-right: 10%;
+    border: none;
+    height: 50%;
+    text-align: center;
+    color:white;
+    border-radius: 0.5rem;
+    background-color: #282828;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    margin-bottom: 5%;
+    width: 100%;
+    outline: none;
+}
+.formulario_label_nombre{
+    font-size: 100%;
+    width: 35%;
+    font-weight: 600;
+    color: #333;
+    margin-left: 5%;
+    margin-bottom: 5%;
+}
+.formulario_label_apellido{
+    font-size: 100%;
+    width: 35%;
+    font-weight: 600;
+    margin-left: 20%;
+    color: #333;
+    margin-bottom: 5%;
+}
+.formulario_label{
+    font-size: 100%;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 5%;
+}
+.formulario_inputs_correo{
+    padding: 3%;
+    text-align: center;
+    width: 90%;
+    margin-left: 5%;
+    font-size: 100%;
+    outline: none;
+    border: none;
+    color: white;
+    border-radius: 0.5rem;
+    background-color: #282828;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+.formulario_letras_apellido{
+    color: white;
+    margin-left: 20%;
+}
+.formulario_letras_mensaje{
+    color: white;
+    margin-left: 40%;
+    margin-top: 10%;
+}
+.formulario_inputs_textArea{
+    width: 90%;
+    padding: 5%;
+    padding-bottom: 10%;
+    margin-left: 5%;
+    border: none;
+    outline: none;
+    color: white;
+    border-radius: 0.5rem;
+    background-color: #282828;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    resize: none;
+}
+.formulario-submit{
+    background-color: transparent;
+    color: #fff;
+    padding: 2%;
+    border-radius: 4%;
+    border:none;
+    margin-top: 5%;
+    margin-left: 5%;
+    font-size: 100%;
+    font-weight: 600;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    cursor: pointer;
+    &:hover{
+        background-color: #1DB954;
+        box-shadow: 0px 0px 15px 5px #1DB954;
+    }
+}
+.formulario_letras{
+    color: white;
+}
+.formulario_letras_nombre{
+    color: white;
+    margin-left: 20%;
+}
+.formulario_letras_correo{
+    color: white;
+    margin-left: 43%;
+    margin-top: -7%;
+}
+.formulario-message {
+    font-weight: 600;
+    visibility: hidden;
+  }
+.formulario_enviar{
+    color: white;
+}
+.formulario-message{
+    color: red;
+}
+.formulario_correcto{
+    color: #1DB954;
+}
+.titulo-formulario{
+    padding-top: 5%;
+    margin-left: 35%;
+}
+.final-formulario{
+    display: flex;
+}
+.formulario_errores_i {
+    margin-left: 15%;
+    margin-top: 7%;
+    color: red;
+}
+.formulario_correcto_c{
+    margin-left: 15%;
+    margin-top: 7%;
+    color: green;
+}
+.final-formulario{
+    padding-bottom: 3%;
+}
+@media only screen and (max-width: 768px){
+    .formulario_contenedor{
+        width: 70%;
+        margin-left: 15%;
+    }
+    .formulario_letras_correo{
+        margin-left: 30%;
+    }
+    .formulario_letras_nombre{
+        color: white;
+        font-size: 50%;
+        margin-left: 20%;
+    }
+    .formulario_letras_apellido{
+        font-size: 50%;
+        margin-left: 20%;
+    }
+    .formulario_letras_correo{
+        font-size: 60%;
+        margin-top: 0%;
+        margin-left: 40%;
+    }
+    .formulario_letras_mensaje{
+        font-size: 60%;
+        margin-left: 37%;
+    }
+    .titulo-formulario{
+        font-weight: 600;
+        padding-top: 5%;
+        margin-left: 15%;
+        margin-bottom: 5%;
+    }
+    .formulario-submit{
+        background-color: #1DB954;
+    }
+    .formulario_errores{
+        font-size: 60%;
+    }
+    .formulario_errores_apellido{
+        font-size: 60%;
+        width: 20%;
+    }
+    .formulario_errores_correo{
+        width: 50%;
+        margin-left: 10%;
+    }
+    .formulario_letras_mensaje{
+        margin-top: 15%;
+    }
+    .formulario-submit{
+        margin-top: 10%;
+        margin-bottom: 2%;
+    }
+
+}
+@media only screen and (min-width: 768px) and (max-width: 991px){
+    .formulario_contenedor{
+        width: 70%;
+        margin-left: 15%;
+        margin-top: 10%;
+    }
+    .formulario_letras_nombre{
+        margin-left: 20%;
+    }
+    .formulario_letras_apellido{
+        margin-left: 20%;
+    }
+    .formulario_letras_correo{
+        margin-top: 0%;
+        margin-left: 40%;
+    }
+    .formulario_letras_mensaje{
+        margin-left: 37%;
+    }
+    .titulo-formulario{
+        font-weight: 600;
+        padding-top: 5%;
+        margin-left: 34%;
+        margin-bottom: 2%;
+    }
+    .formulario_errores_correo{
+        margin-left: 18%;
+    }
+    .formulario_letras_mensaje{
+        margin-top: 10%;
+    }
+    .formulario_errores_mensaje{
+        margin-left: 19%;
+    }
+    .formulario-submit{
+        margin-top: 10%;
+        margin-bottom: 2%;
+        
+    }
+   .formulario-submit{
+    background-color: transparent;
+    color: #fff;
+    padding: 2%;
+    border-radius: 4%;
+    border:none;
+    margin-top: 5%;
+    margin-left: 5%;
+    font-size: 100%;
+    font-weight: 600;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    cursor: pointer;
+    &:hover{
+        background-color: #1DB954;
+        box-shadow: 0px 0px 15px 5px #1DB954;
+    }
+
+}
+}

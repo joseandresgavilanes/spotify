@@ -1,0 +1,110 @@
+@media only screen and (min-width: 991px) {
+    .about_main_container{
+        width: 100%;
+        display: flex;
+        overflow-y: scroll;
+        padding: 40px 35px;
+        justify-content: center;
+    
+    
+    }
+    .container-about{
+        width: 80%;
+        margin-left: 5%;
+    }
+    
+    .superiores{
+        width: 95%;
+        height: 30%;
+        display: flex;
+        margin-top: 2%;
+        margin-left: 5%;
+    }
+    .inferior{
+        width: 60%;
+        display: flex;
+        margin-top: 23%;
+        margin-left: 28%;
+        margin-bottom: 2%;
+    }
+  }
+  
+
+
+@media only screen and (max-width: 768px) {
+    .about_main_container{
+        width: 100%;
+        display: flex;
+        overflow-y: scroll;
+        padding: 40px 35px;
+        justify-content: center;
+
+        
+    }
+ 
+    .superiores{
+        width: 90%;
+        display: block;
+        .primera{
+            padding-bottom: 2%;
+        }
+        margin-top: 3%;
+        margin-left: 30%;
+    }
+    .inferior{
+        width: 90%;
+        margin-left: 30%;
+    }
+  }
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+    .about_main_container{
+        width: 100%;
+        display: flex;
+        overflow-y: scroll;
+        padding: 40px 35px;
+        justify-content: center;
+    }
+    .superiores{
+        width: 90%;
+        display: block;
+        .primera{
+            padding-bottom: 2%;
+        }
+        margin-top: 3%;
+        margin-right: 10%;
+    }
+    .inferior{
+        width: 90%;
+        margin-right: 10%;
+    }
+  }
+  
+
+
+  @media only screen and (max-width: 700px) {
+    .about_main_container{
+        width: 100%;
+        display: flex;
+        overflow-y: scroll;
+        padding: 40px 0px;
+        justify-content: center;
+
+        
+    }
+ 
+    .superiores{
+        display: block;
+        width: 70%;
+        margin: 0 0 0 0;
+        .primera{
+            padding-bottom: 2%;
+        }
+        margin-top: 3%;
+        margin: 0 0 0 20%;
+
+    }
+    .inferior{
+        width: 70%;
+        margin: 0 0 0 20%
+    }
+  }
