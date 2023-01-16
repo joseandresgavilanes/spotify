@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import "./Login.scss"
+import "./Login.scss";
 import useLocalStorage from "../context/useLocalStorage";
+import { NavLink } from "react-router-dom";
 
 const Login = () => {
   // React States
@@ -15,7 +16,9 @@ const Login = () => {
   useEffect(() => {
     if (uname) {
       axios
-        .get(`https://loggin-api-production.up.railway.app/usuarios/correo/${uname}`)
+        .get(
+          `https://loggin-api-production.up.railway.app/usuarios/correo/${uname}`
+        )
         .then((response) => {
           setUserdb(response.data);
         });
@@ -23,7 +26,7 @@ const Login = () => {
   }, [uname]);
   useEffect(() => {
     if (isLoggedIn) {
-      window.location.href = '/home';
+      window.location.href = "/home";
     }
   }, [isLoggedIn]);
 
@@ -42,7 +45,7 @@ const Login = () => {
     if (userdb) {
       if (userdb.correo === uname && userdb.contraseña === pass) {
         console.log("usuario y contraseña correctos");
-        localStorage.setItem('user',JSON.stringify(userdb));
+        localStorage.setItem("user", JSON.stringify(userdb));
         setIsSubmitted(true);
         setIsLoggedIn(true);
       } else if (userdb.correo !== uname) {
@@ -67,7 +70,6 @@ const Login = () => {
   const renderForm = (
     <form onSubmit={handleSubmit}>
       <div className="input-container">
-       
         <input
           type="text"
           name="uname"
@@ -79,7 +81,6 @@ const Login = () => {
         {renderErrorMessage("uname")}
       </div>
       <div className="input-container">
-        
         <input
           type="password"
           name="pass"
@@ -91,6 +92,9 @@ const Login = () => {
         {renderErrorMessage("pass")}
       </div>
       <button type="submit">SING IN</button>
+      <div className="gotoregister">
+        <NavLink to="/register">Don't have an account?</NavLink>
+      </div>
     </form>
   );
 
@@ -104,7 +108,7 @@ const Login = () => {
         />
       </div>
       <div>
-      <h3> SING IN</h3>
+        <h3> SING IN</h3>
         {isSubmitted ? <div>User is successfully logged in</div> : renderForm}
       </div>
     </div>

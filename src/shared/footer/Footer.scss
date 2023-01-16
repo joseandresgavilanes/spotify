@@ -15,6 +15,8 @@
         @media (max-width: 600px) {
             width: 1px;
           }
+
+        
         &_img{
             width: 55px;
             height: 55px;
@@ -23,6 +25,10 @@
                 height: 100%;
                 object-fit: contain;
             }
+
+            @media (max-width: 6000px) {
+                display: none;
+              }
         }
 
         &_details{
@@ -46,12 +52,18 @@
                 color: rgba(191, 191, 191, 0.66);
 
             }
+            @media (max-width: 6000px) {
+                display: none;
+              }
         }
 
         &_extras{
             display: flex;
             gap: .8em;
             @media (max-width: 600px) {
+                display: none;
+              }
+              @media (max-width: 6000px) {
                 display: none;
               }
         }

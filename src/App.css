@@ -3,6 +3,8 @@
   height: 100vh;
   display: flex;
   flex-direction: column;
+  animation: bounce 1s;
+
 }
 
 .Nav{
@@ -21,3 +23,8 @@
 }
 
 
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {transform: translateY(0);} 
+  40% {transform: translateY(-50px);} 
+  60% {transform: translateY(-15px);} 
+} 
