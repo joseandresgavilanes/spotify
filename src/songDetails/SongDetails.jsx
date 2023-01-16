@@ -10,6 +10,28 @@ const SongDetails = () => {
     useGetSongDetailsQuery({ songid });
 
   console.log(songData);
+  let currentAudioPlayer = null;
+
+  const handlePlayClick = () => {
+    if (!currentAudioPlayer) {
+      currentAudioPlayer = new Audio(songData.hub.actions[1].uri);
+      currentAudioPlayer.play();
+      currentAudioPlayer.onended = () => {
+        URL.revokeObjectURL(songData.hub.actions[1].uri);
+        currentAudioPlayer = null;
+      }
+    }
+    else{
+      currentAudioPlayer.pause();
+      URL.revokeObjectURL(songData.hub.actions[1].uri);
+      currentAudioPlayer = new Audio(songData.hub.actions[1].uri);
+      currentAudioPlayer.play();
+      currentAudioPlayer.onended = () => {
+        URL.revokeObjectURL(songData.hub.actions[1].uri);
+        currentAudioPlayer = null;
+      }
+    }
+  }
 
   if (isFetchingSongDetails) return <Loader />;
 
@@ -41,6 +63,7 @@ const SongDetails = () => {
               height="20"
               width="20"
               viewBox="0 0 24 24"
+              onClick={handlePlayClick}
             >
               <path
                 d="M7.05 3.606l13.49 7.788a.7.7 0 010 1.212L7.05 20.394A.7.7 0 016 19.788V4.212a.7.7 0 011.05-.606z"
