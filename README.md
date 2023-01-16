@@ -15,7 +15,7 @@
 
 <h4 align="center">
 
-  <p align="center">https://search-kruger-google.vercel.app/</p>
+  <p align="center">spotify-rose-one.vercel.app/</p>
 
 </h4>
 
@@ -150,7 +150,7 @@ $ add your shazamCore KEY
 
 <h4 align="center">
 	🚧 Status: Building 🚀  🚧
-  <p align="center">https://search-kruger-google.vercel.app/</p>
+  <p align="center">spotify-rose-one.vercel.app/</p>
 
 </h4>
 <br/>
