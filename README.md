@@ -67,10 +67,13 @@
 
 # 🎶 About The Project
 
-[![KRUGER MUSIC]](https://example.com)
+[!![KRUGER MUSIC]](spotify-rose-one.vercel.app/)
 
 Esta es una aplicacion pensada para acompañarte en tu dia a dia.
 Aqui puedes a primera vista mirar las canciones TOP a nivel Mundial y tus propias canciones
+<br>
+<img src="./public/images/screen_kruger_music.jpg" alt="Screen devices">
+
 
 ### What can you do?
 
@@ -148,11 +151,13 @@ $ add your shazamCore KEY
 
 # 💻 Live Demo
 
-<h4 align="center">
-	🚧 Status: Building 🚀  🚧
-  <p align="center">spotify-rose-one.vercel.app/</p>
 
-</h4>
+###	🚧 Status: Building 🚀  🚧
+###  [Deploy](https://spotify-rose-one.vercel.app/)
+
+
+### [Video funcionamiento](https://youtu.be/wD6KHWzMumc)
+
 <br/>
 
 # 🗺 Roadmap
