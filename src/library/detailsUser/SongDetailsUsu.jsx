@@ -1,16 +1,19 @@
 import React,{useEffect, useState} from 'react'
 import axios from 'axios';
+import { useParams } from "react-router-dom";
 import Loader from '../../loader/Loader';
 import './SongDetailsUsu.scss'
 
 const SongDetailsUsu = () => {
+  const { titulo } = useParams();
+  console.log(titulo)
   const [musicdb, setMusicdb] = useState(null);
   const [loading, setLoading] = useState(true);
   const storedSong = JSON.parse(localStorage.getItem("cancion"));
 
   useEffect(() => {
     setLoading(true);
-    axios.get(`https://loggin-api-production.up.railway.app/titulo/${storedSong}`)
+    axios.get(`https://loggin-api-production.up.railway.app/titulo/${titulo}`)
     .then(response => {
       console.log("Llamaste al api")
       setMusicdb(response.data)
@@ -21,7 +24,7 @@ const SongDetailsUsu = () => {
       console.log("algo anda mal")
       setLoading(false);
     });
-  }, [storedSong])
+  }, [titulo])
   
   if (loading) {
     return <Loader />
