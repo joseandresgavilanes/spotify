@@ -165,7 +165,7 @@ const Register = () => {
         <div className="input-container">
           <input
             className=""
-            type="text"
+            type="email"
             name="correo"
             required
             placeholder="E-mail"
