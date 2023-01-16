@@ -27,7 +27,7 @@ const CancionUsuario = (props) => {
               <h2>{props.user.titulo} </h2>
               <p>{props.user.nombre}</p>
             </div>
-            <NavLink to={`/home`}>
+            <NavLink to={`/library`}>
               <div className="play-icon"  onClick={handlePlayClick}>
                 <div className="circle">
                   <div className="triangle"></div>
