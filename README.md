@@ -15,7 +15,15 @@
 
 <h4 align="center">
 
-  <p align="center">spotify-rose-one.vercel.app/</p>
+  
+# 💻 Live Demo
+
+
+###	🚧 Status: Building 🚀  🚧
+###  [Deploy](https://spotify-rose-one.vercel.app/)
+
+
+### [Video of functionality - Spanish ](https://youtu.be/wD6KHWzMumc)
 
 </h4>
 
@@ -66,9 +74,6 @@
 <br/>
 
 # 🎶 About The Project
-
-![[KRUGER MUSIC](https://spotify-rose-one.vercel.app/)](https://spotify-rose-one.vercel.app/)
-
 This is an application designed to accompany you in your daily life.
 Here you can at first glance see the TOP songs worldwide and your own songs
 <br>
@@ -145,17 +150,6 @@ $ add your shazamCore KEY
 
 - Create your own Musical album 📀
 <!-- ROADMAP -->
-<br/>
-
-# 💻 Live Demo
-
-
-###	🚧 Status: Building 🚀  🚧
-###  [Deploy](https://spotify-rose-one.vercel.app/)
-
-
-### [Video funcionamiento](https://youtu.be/wD6KHWzMumc)
-
 <br/>
 
 # 🗺 Roadmap
