@@ -69,18 +69,18 @@
 
 [!![KRUGER MUSIC]](spotify-rose-one.vercel.app/)
 
-Esta es una aplicacion pensada para acompañarte en tu dia a dia.
-Aqui puedes a primera vista mirar las canciones TOP a nivel Mundial y tus propias canciones
+This is an application designed to accompany you in your daily life.
+Here you can at first glance see the TOP songs worldwide and your own songs
 <br>
 <img src="./public/images/screen_kruger_music.jpg" alt="Screen devices">
 
 
 ### What can you do?
 
-- Puedes buscar cualquier musica o canción, sea por artista, genero, pais. 🎵🌎🎺🎤 🇪🇨
-- Crear tu usuario y contraseña con las caracteristicas para un artista.
-  - A demas de tener tus canciones preferidas en la lista de reproduccion, tambien podras poner tus propias canciones para crear tu propio Album.
-    🤵🎵🎧💃🕺🎶
+- You can search for any music or song, whether by artist, genre, country. 🎵🌎🎺🎤 🇪🇨
+- Create your username and password with the characteristics for an artist.
+   - In addition to having your favorite songs in the playlist, you can also put your own songs to create your own Album.
+     🤵🎵🎧💃🕺🎶
 
 # 🔨 Built with
 
@@ -132,20 +132,18 @@ $ add your shazamCore KEY
 <br/>
 
 # ⏩ Usage
-
-- Crear una cuenta: ✍🏼
+- Create an account: ✍🏼
   [![Product usage Screen Shot][usage2-screenshot]]
 
-- Ingresa con tu cuenta de usuario 🗝️
+- Log in with your user account 🗝️
 
-- Disfruta de tu música preferida 🎵 ᴺᴼᵂ ᴾᴸᴬᵞᴵᴺᴳ♫♬♪
+- Enjoy your favorite music 🎵 ᴺᴼᵂ ᴾᴸᴬᵞᴵᴺᴳ♫♬♪
 
-- En tu Cuenta edita tu informacion 📝
+- In your Account edit your information 📝
 
-- Crea tu lista de reproduccion 📋 ▶️ 🎵
+- Create your playlist 📋 ▶️ 🎵
 
-- Crea tu Propio album Musical 📀
-
+- Create your own Musical album 📀
 <!-- ROADMAP -->
 <br/>
 
@@ -162,24 +160,24 @@ $ add your shazamCore KEY
 
 # 🗺 Roadmap
 
-- [x] Seleccionar Tema de nuestra aplicación
-- [x] Buscar Api que se adapten a nuestras ideas
-- [x] Revisar que informacion nos da el Api
-- [x] Realizar lluvia de ideas para la funcionalidad y onjetivos de ejecución.
-- [x] FUNCIONALIDAD FRONTEND:
-  - [x] Decidir Modelo Visual a implementar
-  - [x] Metodologia de trabajo sobre Github
-  - [x] Estructura de Carpetas dentro de la Aplicacion
-  - [x] Estandarizacion de nombramiento
-        componentes y clases dentro del html
-  - [x] Generación de componentes con el Api Sazham Core
-    - [x] Mostrar Canciones Global
-    - [x] Componente de Busqueda
-    - [x] Playlist personalizada
-- [x] FUNCIONALIDAD BACKEND:
-  - [x] Seleccionar base de datos
-  - [x] Implementación Api con Springboot
-  - [x] Deploy y publicación del Api personalizada para CRUD
+- [x] Select Theme of our application
+- [x] Find APIs that suit our ideas
+- [x] Check what information the API gives us
+- [x] Brainstorm ideas for functionality and execution objectives.
+- [x] FRONTEND FUNCTIONALITY:
+   - [x] Decide Visual Model to implement
+   - [x] Work methodology on Github
+   - [x] Folder Structure within the Application
+   - [x] Appointment standardization
+         components and classes within the html
+   - [x] Component generation with the Sazham Core API
+     - [x] Show Global Songs
+     - [x] Search Component
+     - [x] Custom Playlist
+- [x] BACKEND FUNCTIONALITY:
+   - [x] Select database
+   - [x] Api implementation with Springboot
+   - [x] Deploy and publish custom API for CRUD
 
 <!-- CONTRIBUTING -->
 <br/>
@@ -200,7 +198,7 @@ Contributions are what make the open source community such an amazing place to b
 
 # 📜 License
 
-Fantasy Team esa distribuida bajo los terminos de Apache License Version 2.0. La version completa de la licencia esta disponible en el archivo [LICENSE](LICENSE) de este repositorio. Cualquier contribucion a este proyecto sera licenciada bajo la licencia Apache License Version 2.0.
+Kruger music esa distribuida bajo los terminos de Apache License Version 2.0. La version completa de la licencia esta disponible en el archivo [LICENSE](LICENSE) de este repositorio. Cualquier contribucion a este proyecto sera licenciada bajo la licencia Apache License Version 2.0.
 
 <br/>
 <!-- CONTACT -->
@@ -235,7 +233,7 @@ Fantasy Team esa distribuida bajo los terminos de Apache License Version 2.0. La
 
 Project Link: [Kruger Music](https://google.com)
 
-Video Demostration Link: [Kruger Music](https://google.com)
+Demostration Link: [Kruger Music](https://google.com)
 
 <!-- ACKNOWLEDGMENTS -->
 
@@ -246,15 +244,15 @@ Video Demostration Link: [Kruger Music](https://google.com)
 <table>
     <tbody>
         <tr>
-        <td align="center"><a href="https://github.com/Adrian-Bastidas"><img src="./public/images/Adrian.jpg" width="100px;" alt="Adrian Bastidas"/><br /><sub><b>Adrian Bastidas</b></sub></a><br /><a href="https://github.com/Adrian-Bastidas" title="Code">💻 Desarrollador</a></td>
+        <td align="center"><a href="https://github.com/Adrian-Bastidas"><img src="./public/images/Adrian.jpg" width="100px;" alt="Adrian Bastidas"/><br /><sub><b>Adrian Bastidas</b></sub></a><br /><a href="https://github.com/Adrian-Bastidas" title="Code">💻 Developer</a></td>
         <tr/>
         <br/>
         <tr>
-        <td align="center"><a href="https://github.com/xander06"><img src="./public/images/Alexander.jpeg" width="100px;" alt="Alexander Cangas"/><br /><sub><b>Alexander Cangas</b></sub></a><br /><a href="https://github.com/xander06" title="Code">💻 Desarrollador</a></td>
+        <td align="center"><a href="https://github.com/xander06"><img src="./public/images/Alexander.jpeg" width="100px;" alt="Alexander Cangas"/><br /><sub><b>Alexander Cangas</b></sub></a><br /><a href="https://github.com/xander06" title="Code">💻 Developer</a></td>
         </tr>
         <br/>
         <tr>
-        <td align="center"><a href="https://github.com/joseandresgavilanes"><img src="./public/images/Pepe.jpeg" width="100px;" alt="Alexander Cangas"/><br /><sub><b>Jose Andres Gavilanes</b></sub></a><br /><a href="https://github.com/joseandresgavilanes" title="Code">💻 Desarrollador</a></td>
+        <td align="center"><a href="https://github.com/joseandresgavilanes"><img src="./public/images/Pepe.jpeg" width="100px;" alt="Alexander Cangas"/><br /><sub><b>Jose Andres Gavilanes</b></sub></a><br /><a href="https://github.com/joseandresgavilanes" title="Code">💻 Developer</a></td>
         </tr>
         <br/>
         <tr>
