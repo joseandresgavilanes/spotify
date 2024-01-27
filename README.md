@@ -67,7 +67,7 @@
 
 # 🎶 About The Project
 
-[[KRUGER MUSIC](https://spotify-rose-one.vercel.app/)](https://spotify-rose-one.vercel.app/)
+![[KRUGER MUSIC](https://spotify-rose-one.vercel.app/)](https://spotify-rose-one.vercel.app/)
 
 This is an application designed to accompany you in your daily life.
 Here you can at first glance see the TOP songs worldwide and your own songs
